@@ -1,0 +1,11 @@
+Model Information:
+* title:	RC796 - Volante de huso
+* source:	https://sketchfab.com/3d-models/rc796-volante-de-huso-8c99e4543eec4ae38d7176a70a772af8
+* author:	lb19 (https://sketchfab.com/lb19)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "RC796 - Volante de huso" (https://sketchfab.com/3d-models/rc796-volante-de-huso-8c99e4543eec4ae38d7176a70a772af8) by lb19 (https://sketchfab.com/lb19) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

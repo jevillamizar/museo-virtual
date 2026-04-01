@@ -1,0 +1,11 @@
+Model Information:
+* title:	RC075 - Volante de huso
+* source:	https://sketchfab.com/3d-models/rc075-volante-de-huso-c7b4986fc0944d9e8d85f34b1bc22471
+* author:	LAAUA (https://sketchfab.com/LAAUA)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "RC075 - Volante de huso" (https://sketchfab.com/3d-models/rc075-volante-de-huso-c7b4986fc0944d9e8d85f34b1bc22471) by LAAUA (https://sketchfab.com/LAAUA) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
