@@ -3,7 +3,7 @@ import Volante3Canvas from "../canvas/Volante3";
 
 function Recuadro3D(props) {
     
-    const linkPath = `http://localhost:5173/${props.link}`;
+    const linkPath = `/${props.link}`;
 
     return (
         <div className='w-full mx-10 my-10 md:my-50 max-w-screen-lg flex flex-col md:flex-row bg-slate-400 rounded-lg shadow-lg overflow-hidden'>

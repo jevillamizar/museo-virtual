@@ -4,7 +4,7 @@ import Volante2Canvas from "../canvas/Volante2";
 import Volante3Canvas from "../canvas/Volante3";
 
 function Card3D(props) {
-  const linkPath = `http://localhost:5173/${props.link}`;
+  const linkPath = `/${props.link}`;
   
   const canvasComponents = {
     Volante: VolanteCanvas,
