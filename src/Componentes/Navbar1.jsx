@@ -32,62 +32,53 @@ const Navbar1 = () => {
   };
 
   const content = (
-    <div className='lg:hidden block absolute top-12 w-full left-0 right-0 bg-gray-600 opacity-85 transition'>
+    <div className='lg:hidden block absolute top-12 w-full left-0 right-0 bg-unicauca-azul opacity-95 transition'>
       <ul className='text-center text-2xl p-20'>
-        <li className='my-4 py-4 hover:bg-green-600 hover:rounded' onClick={handleClick}>
-          <Link to='/'>
-            <strong>Principal</strong>
-          </Link>
-        </li>
-        <li className='my-4 py-4 hover:bg-green-600 hover:rounded' onClick={handleClick}>
+        <li className='my-4 py-4 hover:bg-unicauca-azulhover hover:rounded' onClick={handleClick}>
           <Link to='/Page'>
-            <strong>Page</strong>
+            <strong>Volantes de uso</strong>
           </Link>
         </li>
-        <li className='my-4 py-4 hover:bg-green-600 hover:rounded' onClick={handleClick}>
+        <li className='my-4 py-4 hover:bg-unicauca-azulhover hover:rounded' onClick={handleClick}>
+          <Link to='/About'>
+            <strong>Sobre nosotros</strong>
+          </Link>
+        </li>
+        <li className='my-4 py-4 hover:bg-unicauca-azulhover hover:rounded' onClick={handleClick}>
           <Link to='/Contact'>
-            <strong>Contact</strong>
+            <strong>Contacto</strong>
           </Link>
         </li>
-        <li className='my-4 py-4 hover:bg-green-600 hover:rounded' onClick={handleClick}>
-          <Link to='/Home'>
-            <strong>Home</strong>
-          </Link>
-        </li>
+        
       </ul>
     </div>
   );
 
   return (
-    <nav className={`bg-bosque fixed w-full z-10 ${visible ? '' : '-translate-y-full'}`}>
+    <nav className={`bg-unicauca-azul fixed w-full z-10 transition-transform duration-300 ${visible ? '' : '-translate-y-full'}`}>
       <div className='h-10vh flex justify-between text-white lg:py-3 px-20 py-2'>
         <div className='flex items-center flex-1'>
-          <span className='text-3xl font-bold'>Logo</span>
+          <Link to='/' className='text-3xl font-bold'>Logo</Link>
         </div>
 
         <div className='md:flex sm:flex md:flex-1 items-center justify-end font-normal hidden'>
           <div className='flex-10'>
             <ul className='flex gap-8 lg:mr-16 text-[22px]'>
-              <li className='hover:bg-slate-900 hover:rounded transition cursor-pointer' onClick={handleClick}>
-                <Link to='/'>
-                  <strong>Principal</strong>
-                </Link>
-              </li>
-              <li className='hover:bg-slate-900 hover:rounded transition cursor-pointer' onClick={handleClick}>
+              <li className='hover:bg-unicauca-azulhover hover:rounded transition cursor-pointer px-3 py-1' onClick={handleClick}>
                 <Link to='/Page'>
-                  <strong>Page</strong>
+                  <strong>Volantes</strong>
                 </Link>
               </li>
-              <li className='hover:bg-slate-900 hover:rounded transition cursor-pointer' onClick={handleClick}>
+              <li className='hover:bg-unicauca-azulhover hover:rounded transition cursor-pointer px-3 py-1' onClick={handleClick}>
+                <Link to='/About'>
+                  <strong>Sobre nosotros</strong>
+                </Link>
+              </li>
+              <li className='hover:bg-unicauca-azulhover hover:rounded transition cursor-pointer px-3 py-1' onClick={handleClick}>
                 <Link to='/Contact'>
-                  <strong>Contact</strong>
+                  <strong>Contacto</strong>
                 </Link>
-              </li>
-              <li className='hover:bg-slate-900 hover:rounded transition cursor-pointer' onClick={handleClick}>
-                <Link to='/Home'>
-                  <strong>Home</strong>
-                </Link>
-              </li>
+              </li>              
             </ul>
           </div>
         </div>

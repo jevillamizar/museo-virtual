@@ -50,7 +50,7 @@ const Principal = () => {
   };
 
   return (
-    <div className='min-h-screen flex flex-wrap items-center justify-center text-center'>
+    <div className='min-h-screen flex flex-wrap items-center justify-center text-center bg-unicauca-blancoRoto'>
       <div className='min-h-600 flex flex-wrap items-center justify-center'>
         <div className="mt-14 lg:mt-16 flex justify-center items-center w-full">
           <Recuadro360
