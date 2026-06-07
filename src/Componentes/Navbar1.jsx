@@ -41,7 +41,7 @@ const Navbar1 = () => {
         </li>
         <li className='my-4 py-4 hover:bg-unicauca-azulhover hover:rounded' onClick={handleClick}>
           <Link to='/About'>
-            <strong>Sobre nosotros</strong>
+            <strong>Historia</strong>
           </Link>
         </li>
         <li className='my-4 py-4 hover:bg-unicauca-azulhover hover:rounded' onClick={handleClick}>
@@ -71,7 +71,7 @@ const Navbar1 = () => {
               </li>
               <li className='hover:bg-unicauca-azulhover hover:rounded transition cursor-pointer px-3 py-1' onClick={handleClick}>
                 <Link to='/About'>
-                  <strong>Sobre nosotros</strong>
+                  <strong>Historia</strong>
                 </Link>
               </li>
               <li className='hover:bg-unicauca-azulhover hover:rounded transition cursor-pointer px-3 py-1' onClick={handleClick}>
