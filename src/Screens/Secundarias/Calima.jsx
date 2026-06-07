@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useMeta } from '../../hooks/useMeta';
+import { useAnalytics } from '../../hooks/useAnalytics';
 import { getPiezasPorCultura } from '../../supabaseClient';
 import Infotext from "../../Componentes/Text/Infotext";
 import Texto from "../../Componentes/Text/Texto";
@@ -9,6 +10,7 @@ import LoadingPage from "../../Componentes/UI/LoadingPage";
 import Breadcrumb from "../../Componentes/UI/Breadcrumb";
 
 const Calima = () => {
+  useAnalytics('Cultura - Calima');
   useMeta({
     titulo: 'Volantes de Huso — Calima',
     descripcion: 'Piezas arqueológicas de la cultura Calima en el Museo de Historia Natural Unicauca',

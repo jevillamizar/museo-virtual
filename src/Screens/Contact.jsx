@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useMeta } from '../hooks/useMeta';
+import { useAnalytics } from '../hooks/useAnalytics';
 import Breadcrumb from '../Componentes/UI/Breadcrumb';
 import { AiOutlineMail, AiOutlinePhone, AiOutlineEnvironment, AiOutlineClockCircle } from 'react-icons/ai';
 
@@ -27,6 +28,7 @@ const INFO = [
 ];
 
 const Contact = () => {
+  useAnalytics('Contacto');
   useMeta({
     titulo: 'Contacto',
     descripcion: 'Contáctanos — Museo de Historia Natural de la Universidad del Cauca',

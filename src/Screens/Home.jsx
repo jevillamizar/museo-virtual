@@ -1,4 +1,5 @@
 import { useMeta } from '../hooks/useMeta';
+import { useAnalytics } from '../hooks/useAnalytics';
 import Contenedor from "../Componentes/2D/Contenedor";
 import ContenedorInvert from "../Componentes/2D/ContenedorInvert";
 import Informacion from "../Componentes/2D/Informacion";
@@ -14,6 +15,7 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import MapI from "../Componentes/Map/MapI";
 
 const Home = () => {
+  useAnalytics('Sobre el Museo');
   useMeta({
     titulo: 'Acerca del Museo',
     descripcion: 'Conoce la historia y colección del Museo de Historia Natural de la Universidad del Cauca',
@@ -35,42 +37,12 @@ const Home = () => {
     <>
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center'>
       <div className='min-h-600 flex flex-wrap items-center justify-center'>
-        <h1 className='max-w-940 text-5xl font-bold leading-tight my-10 '>
-          Museo de Historia Natural — Universidad del Cauca
-        </h1>
-
-        <Contenedor
-          imagen='ceramoteca'
-          titulo='El Museo de Historia Natural'
-          subtitulo='Universidad del Cauca'
-          parrafo='El Museo de Historia Natural de la Universidad del Cauca es uno de los repositorios más importantes del patrimonio arqueológico y natural del suroccidente colombiano. Su colección de volantes de huso prehispánicos es única en el país por su representatividad cultural y diversidad regional.'
-        />
-
+        
         <Informacion
           imagen='ceramoteca'
           titulo='Una colección con historia'
           parrafo='Los volantes de huso son pequeñas piezas de cerámica, piedra o hueso que se usaban para hilar fibras vegetales y animales. En el Museo de Historia Natural de la Universidad del Cauca se conservan ejemplares provenientes de ocho zonas arqueológicas del suroccidente colombiano: Popayán, Calima, Corinto, Nariño, Patía, Tumaco, Tierradentro y Quimbaya. Cada pieza es un testimonio de la vida cotidiana, la espiritualidad y la organización social de los pueblos que habitaron esta región durante miles de años.'
         />
-
-        <ContenedorInvert
-          imagen='ceramoteca'
-          titulo='La Ceramoteca'
-          subtitulo='Conservación e investigación'
-          parrafo='La Ceramoteca alberga una de las colecciones más importantes de cerámica prehispánica del suroccidente colombiano. Este espacio de investigación y conservación custodia piezas que dan cuenta de la diversidad cultural y tecnológica de los pueblos que habitaron esta región durante miles de años.'
-        />
-
-        <div className='max-w-screen-lg mx-auto card-container'>
-          {cards.map((card, index) => (
-            <div key={index} className='w-1/3 p-1'>
-              <Card3D
-                titulo={card.titulo}
-                parrafo={card.parrafo}
-                link={card.link}
-                imagen={card.imagen}
-              />
-            </div>
-          ))}
-        </div>
 
         <div className='flex justify-center w-full'>
           <Map />

@@ -1,10 +1,12 @@
 import { useMeta } from '../hooks/useMeta';
+import { useAnalytics } from '../hooks/useAnalytics';
 import Breadcrumb from "../Componentes/UI/Breadcrumb";
 import Contenedor3D from "../Componentes/3D/Contenedor3D";
 import Recuadro3D from "../Componentes/3D/Recuadro3D";
 import { Link } from 'react-router-dom';
 
 const Volantes = () => {
+  useAnalytics('Colección de Volantes de Huso');
   useMeta({
     titulo: 'Colección de Volantes de Huso',
     descripcion: 'Explora la colección de volantes de huso prehispánicos del Museo de Historia Natural de la Universidad del Cauca',

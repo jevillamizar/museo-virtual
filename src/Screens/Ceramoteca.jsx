@@ -1,4 +1,5 @@
 import { useMeta } from '../hooks/useMeta';
+import { useAnalytics } from '../hooks/useAnalytics';
 import Breadcrumb from "../Componentes/UI/Breadcrumb";
 import Recuadro360 from "../Componentes/3D/Recuadro360";
 import { Link } from 'react-router-dom';
@@ -26,6 +27,7 @@ const datos = [
 ];
 
 const Ceramoteca = () => {
+  useAnalytics('Ceramoteca');
   useMeta({
     titulo: 'Ceramoteca — Museo de Historia Natural',
     descripcion: 'Conoce la Ceramoteca del Museo de Historia Natural de la Universidad del Cauca y su colección de cerámica prehispánica',

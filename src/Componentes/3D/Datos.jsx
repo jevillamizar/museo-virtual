@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { trackEvent } from '../../analytics/ga4';
 import PropTypes from 'prop-types';
 import VolanteCanvas from "../canvas/Volante";
 import Volante2Canvas from "../canvas/Volante2";
@@ -47,6 +48,36 @@ ErrorBoundary.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
+function GltfVisorWithTracking({ CanvasComponent, nombre, hintVisible, onFirstInteraction }) {
+  const interaccionTrackedRef = useRef(false);
+
+  useEffect(() => {
+    trackEvent('Modelo3D', 'vista_gltf', nombre || 'sin_nombre');
+  }, [nombre]);
+
+  const handlePointerDown = () => {
+    onFirstInteraction();
+    if (!interaccionTrackedRef.current) {
+      interaccionTrackedRef.current = true;
+      trackEvent('Modelo3D', 'interaccion_gltf', nombre || 'sin_nombre');
+    }
+  };
+
+  return (
+    <div className="relative w-full h-64 md:h-72" onPointerDown={handlePointerDown}>
+      <CanvasComponent />
+      {hintVisible && <Hint3D onFirstInteraction={onFirstInteraction} />}
+    </div>
+  );
+}
+
+GltfVisorWithTracking.propTypes = {
+  CanvasComponent:    PropTypes.elementType.isRequired,
+  nombre:             PropTypes.string,
+  hintVisible:        PropTypes.bool.isRequired,
+  onFirstInteraction: PropTypes.func.isRequired,
+};
+
 function Visor3D({ pieza }) {
   const tipo = pieza?.modelo_3d_tipo;
   const url  = pieza?.modelo_3d_url;
@@ -73,10 +104,12 @@ function Visor3D({ pieza }) {
     const key = nombre && canvasComponents[nombre] ? nombre : 'Volante';
     const CanvasComponent = canvasComponents[key];
     return (
-      <div className="relative w-full h-64 md:h-72" onPointerDown={() => setHintVisible(false)}>
-        <CanvasComponent />
-        {hintVisible && <Hint3D onFirstInteraction={() => setHintVisible(false)} />}
-      </div>
+      <GltfVisorWithTracking
+        CanvasComponent={CanvasComponent}
+        nombre={nombre}
+        hintVisible={hintVisible}
+        onFirstInteraction={() => setHintVisible(false)}
+      />
     );
   }
 

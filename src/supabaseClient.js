@@ -39,6 +39,14 @@ export async function getPiezasPorCultura(cultura) {
   return { data, error };
 }
 
+export async function enviarRetroalimentacion(datos) {
+  const { data, error } = await supabase
+    .from('retroalimentacion')
+    .insert([datos]);
+  if (error) throw error;
+  return data;
+}
+
 export async function getConfiguracionSitio() {
   const { data, error } = await supabase
     .from('configuracion_sitio')

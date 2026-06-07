@@ -1,4 +1,5 @@
 import { useMeta } from '../hooks/useMeta';
+import { useAnalytics } from '../hooks/useAnalytics';
 import Breadcrumb from "../Componentes/UI/Breadcrumb";
 import { Link } from 'react-router-dom';
 import { GiSpinningTop, GiWool, GiYarn } from 'react-icons/gi';
@@ -32,6 +33,7 @@ const etapas = [
 ];
 
 const Textiles = () => {
+  useAnalytics('Textiles en la Arqueología');
   useMeta({
     titulo: 'Textiles en la Arqueología del Suroccidente Colombiano',
     descripcion: 'Descubre la historia de los textiles prehispánicos del suroccidente colombiano y su conexión con los volantes de huso del museo',

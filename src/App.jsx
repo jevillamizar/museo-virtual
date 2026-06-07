@@ -16,6 +16,9 @@ import Tumaco from './Screens/Secundarias/Tumaco';
 import TierraAdentro from './Screens/Secundarias/TierraAdentro';
 import Quimbaya from './Screens/Secundarias/Quimbaya';
 import NotFound from './Screens/NotFound';
+import Retroalimentacion from './Screens/Retroalimentacion';
+import Footer from './Componentes/UI/Footer';
+import CookieBanner from './Componentes/UI/CookieBanner';
 
 import {
   BrowserRouter as Router,
@@ -48,8 +51,11 @@ function App() {
             <Route path='/Tumaco' element={<Tumaco />} />
             <Route path='/TierraAdentro' element={<TierraAdentro />} />
             <Route path='/Quimbaya' element={<Quimbaya />} />
+            <Route path='/Retroalimentacion' element={<Retroalimentacion />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
+          <Footer />
+          <CookieBanner />
         </div>
       </Router>
 

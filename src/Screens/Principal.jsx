@@ -1,4 +1,5 @@
 import { useMeta } from '../hooks/useMeta';
+import { useAnalytics } from '../hooks/useAnalytics';
 import Recuadro from "../Componentes/2D/Recuadro";
 import Recuadro360 from "../Componentes/3D/Recuadro360";
 import HojaLibro from "../Componentes/2D/HojaLibro";
@@ -15,6 +16,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Principal = () => {
+  useAnalytics('Inicio');
   useMeta({
     titulo: 'Inicio',
     descripcion: 'Explora los volantes de huso prehispánicos del suroccidente colombiano en el Museo de Historia Natural Unicauca',

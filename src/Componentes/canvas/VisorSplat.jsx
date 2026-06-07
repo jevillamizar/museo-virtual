@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { trackEvent } from '../../analytics/ga4';
 import PropTypes from 'prop-types';
 
 const FILE_SIZE_WARNING_MB = 100;
@@ -77,6 +78,7 @@ function VisorSplat({ url, nombre, cameraUrl, initialPosition, initialLookAt, on
   const [error, setError] = useState(null);
   const abortRef = useRef(null);
   const debugIntervalRef = useRef(null);
+  const rotacionTrackedRef = useRef(false);
 
   useEffect(() => {
     return () => {
@@ -168,6 +170,7 @@ function VisorSplat({ url, nombre, cameraUrl, initialPosition, initialLookAt, on
       const msg = err.message || 'Error al descargar el modelo 3D';
       setError(msg);
       setPhase('error');
+      trackEvent('Modelo3D', 'error_carga', nombre || 'sin_nombre');
       if (onError) onError(err);
     }
   };
@@ -251,11 +254,13 @@ function VisorSplat({ url, nombre, cameraUrl, initialPosition, initialLookAt, on
 
       viewer.start();
       setPhase('ready');
+      trackEvent('Modelo3D', 'carga_completa', nombre || 'sin_nombre');
       if (onLoad) onLoad();
     } catch (err) {
       const msg = err?.message || 'Error al inicializar el visor 3D';
       setError(msg);
       setPhase('error');
+      trackEvent('Modelo3D', 'error_carga', nombre || 'sin_nombre');
       if (onError) onError(err);
     }
   };
@@ -314,6 +319,12 @@ function VisorSplat({ url, nombre, cameraUrl, initialPosition, initialLookAt, on
       aria-label={`Modelo 3D interactivo del volante de huso ${nombre || ''}`}
       className="relative w-full max-w-2xl mx-auto rounded-lg overflow-hidden bg-gray-900"
       style={{ aspectRatio: '16/9' }}
+      onPointerDown={() => {
+        if (!rotacionTrackedRef.current) {
+          rotacionTrackedRef.current = true;
+          trackEvent('Modelo3D', 'primera_rotacion', nombre || 'sin_nombre');
+        }
+      }}
     >
       {(phase === 'loading' || phase === 'checking') && (
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 bg-gray-900 gap-4 p-6">
