@@ -6,6 +6,7 @@ import Texto from "../../Componentes/Text/Texto";
 import Boxtext from "../../Componentes/Text/Boxtext";
 import Datos from "../../Componentes/3D/Datos";
 import LoadingPage from "../../Componentes/UI/LoadingPage";
+import Breadcrumb from "../../Componentes/UI/Breadcrumb";
 
 const Calima = () => {
   useMeta({
@@ -66,6 +67,13 @@ const Calima = () => {
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center p-4 bg-unicauca-blancoRoto'>
       <main className='min-h-600 flex flex-wrap items-center justify-center w-full'>
       <section aria-label="Cultura Calima — información y piezas arqueológicas" className="w-full flex flex-wrap items-center justify-center">
+        <div className="w-full px-4 pt-4">
+          <Breadcrumb items={[
+            { label: 'Inicio', path: '/' },
+            { label: 'Áreas Arqueológicas', path: '/' },
+            { label: 'Calima', path: '/Calima' },
+          ]} />
+        </div>
         
         <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
           <Infotext

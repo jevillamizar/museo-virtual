@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import VolanteCanvas from "../canvas/Volante";
 import Volante2Canvas from "../canvas/Volante2";
 import Volante3Canvas from "../canvas/Volante3";
 import VisorSplat from "../canvas/VisorSplat";
+import Hint3D from "../UI/Hint3D";
 
 const NA = 'Información próximamente';
 
@@ -50,11 +51,15 @@ function Visor3D({ pieza }) {
   const tipo = pieza?.modelo_3d_tipo;
   const url  = pieza?.modelo_3d_url;
   const nombre = pieza?.nombre;
+  const [hintVisible, setHintVisible] = useState(true);
 
   if (tipo === 'gaussian_splat' || tipo === 'ply') {
     return (
       <ErrorBoundary>
-        <VisorSplat url={url} nombre={nombre} cameraUrl={pieza?.camera_url} initialPosition={pieza?.camera_initial_position} initialLookAt={pieza?.camera_look_at} />
+        <div className="relative" onPointerDown={() => setHintVisible(false)}>
+          <VisorSplat url={url} nombre={nombre} cameraUrl={pieza?.camera_url} initialPosition={pieza?.camera_initial_position} initialLookAt={pieza?.camera_look_at} />
+          {hintVisible && <Hint3D onFirstInteraction={() => setHintVisible(false)} />}
+        </div>
       </ErrorBoundary>
     );
   }
@@ -68,8 +73,9 @@ function Visor3D({ pieza }) {
     const key = nombre && canvasComponents[nombre] ? nombre : 'Volante';
     const CanvasComponent = canvasComponents[key];
     return (
-      <div className="w-full h-64 md:h-72">
+      <div className="relative w-full h-64 md:h-72" onPointerDown={() => setHintVisible(false)}>
         <CanvasComponent />
+        {hintVisible && <Hint3D onFirstInteraction={() => setHintVisible(false)} />}
       </div>
     );
   }
@@ -85,47 +91,73 @@ Visor3D.propTypes = {
   pieza: PropTypes.object,
 };
 
-function FichaField({ label, value }) {
-  if (!value) return null;
+const NR = 'No registrado';
+
+function FichaField({ emoji, label, value }) {
   return (
     <div className="flex flex-col gap-0.5">
       <span className="text-xs font-semibold uppercase tracking-wide text-unicauca-grisMedio">
+        {emoji && <span className="mr-1" aria-hidden="true">{emoji}</span>}
         {label}
       </span>
-      <span className="text-sm text-unicauca-grisOscuro font-lato">{value}</span>
+      <span className={`text-sm font-lato ${value ? 'text-unicauca-grisOscuro' : 'text-unicauca-grisMedio italic'}`}>
+        {value || NR}
+      </span>
     </div>
   );
 }
 
 FichaField.propTypes = {
+  emoji: PropTypes.string,
   label: PropTypes.string.isRequired,
   value: PropTypes.string,
+};
+
+function ContextoSubseccion({ titulo, texto }) {
+  if (!texto) return null;
+  return (
+    <div>
+      <h4 className="text-xs font-semibold uppercase tracking-wide text-unicauca-grisMedio mb-1">
+        {titulo}
+      </h4>
+      <p className="text-sm text-unicauca-grisOscuro font-lato leading-relaxed">
+        {texto}
+      </p>
+    </div>
+  );
+}
+
+ContextoSubseccion.propTypes = {
+  titulo: PropTypes.string.isRequired,
+  texto:  PropTypes.string,
 };
 
 function Datos({ pieza }) {
   if (!pieza) return null;
 
   const culturaBadgeClass = CULTURA_COLORS[pieza.cultura] || 'bg-unicauca-azul text-white';
+  const hasContexto = pieza.descripcion || pieza.descripcion_cultural || pieza.usos || pieza.relevancia_educativa;
 
   return (
     <div className="w-full mt-6 flex flex-col gap-6">
 
-      {/* Sección 3 — Visor 3D */}
+      {/* Visor 3D */}
       <div className="w-full">
         <Visor3D pieza={pieza} />
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-6 w-full">
+      {/* Grid ficha + contexto */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
 
-        {/* Sección 1 — Ficha Arqueológica */}
-        <div className="flex-1 bg-white rounded-lg shadow-lg border-t-4 border-unicauca-azul p-6">
-          <div className="mb-4 flex flex-col gap-1">
+        {/* Ficha Arqueológica */}
+        <div className="bg-white rounded-lg shadow-md border-l-4 border-green-800 p-6 flex flex-col gap-4">
+          <div className="flex flex-col gap-1">
             <h2 className="text-xl font-bold text-unicauca-grisOscuro font-lato">
-              {pieza.nombre || NA}
+              {pieza.nombre || NR}
             </h2>
             {pieza.numero_catalogo && (
               <span className="text-xs text-unicauca-grisMedio font-mono">
-                #{pieza.numero_catalogo}
+                🔢 #{pieza.numero_catalogo}
               </span>
             )}
             {pieza.cultura && (
@@ -135,16 +167,16 @@ function Datos({ pieza }) {
             )}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <FichaField label="Período histórico"  value={pieza.periodo_historico} />
-            <FichaField label="Lugar de hallazgo"  value={pieza.lugar_hallazgo} />
-            <FichaField label="Dimensiones"        value={pieza.dimensiones} />
-            <FichaField label="Material"           value={pieza.material} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-gray-100">
+            <FichaField emoji="⏳" label="Período histórico"  value={pieza.periodo_historico} />
+            <FichaField emoji="📍" label="Lugar de hallazgo"  value={pieza.lugar_hallazgo} />
+            <FichaField emoji="📐" label="Dimensiones"        value={pieza.dimensiones} />
+            <FichaField emoji="🪨" label="Material"           value={pieza.material} />
           </div>
         </div>
 
-        {/* Sección 2 — Contexto Cultural */}
-        <div className="flex-1 bg-unicauca-blancoRoto rounded-lg shadow-lg border-t-4 border-unicauca-verdeAgua p-6 flex flex-col gap-4">
+        {/* Contexto Cultural */}
+        <div className="bg-gray-50 rounded-lg shadow-md border border-gray-200 p-6 flex flex-col gap-4">
           <h3 className="text-lg font-bold text-unicauca-grisOscuro font-lato border-b border-gray-200 pb-2">
             Contexto Cultural
           </h3>
@@ -155,42 +187,18 @@ function Datos({ pieza }) {
             </p>
           )}
 
-          {pieza.descripcion_cultural && (
-            <p className="text-sm text-unicauca-grisOscuro font-lato leading-relaxed">
-              {pieza.descripcion_cultural}
-            </p>
-          )}
+          <ContextoSubseccion titulo="Significado cultural"    texto={pieza.descripcion_cultural} />
+          <ContextoSubseccion titulo="Usos documentados"       texto={pieza.usos} />
+          <ContextoSubseccion titulo="¿Por qué es importante?" texto={pieza.relevancia_educativa} />
 
-          {pieza.usos && (
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-wide text-unicauca-grisMedio block mb-1">
-                Usos
-              </span>
-              <p className="text-sm text-unicauca-grisOscuro font-lato leading-relaxed">
-                {pieza.usos}
-              </p>
-            </div>
-          )}
-
-          {pieza.relevancia_educativa && (
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-wide text-unicauca-grisMedio block mb-1">
-                Relevancia educativa
-              </span>
-              <p className="text-sm text-unicauca-grisOscuro font-lato leading-relaxed">
-                {pieza.relevancia_educativa}
-              </p>
-            </div>
-          )}
-
-          {!pieza.descripcion && !pieza.descripcion_cultural && !pieza.usos && !pieza.relevancia_educativa && (
+          {!hasContexto && (
             <p className="text-sm text-unicauca-grisMedio italic">{NA}</p>
           )}
 
           {pieza.dato_curioso && (
-            <div className="mt-2 bg-unicauca-amarillo/20 border-l-4 border-unicauca-amarillo rounded-r-lg p-4">
-              <p className="text-xs font-bold text-unicauca-grisOscuro uppercase tracking-wide mb-1">
-                ¿Sabías que...?
+            <div className="mt-auto bg-unicauca-amarillo/20 border-l-4 border-unicauca-amarillo rounded-r-lg p-4">
+              <p className="text-xs font-bold text-unicauca-grisOscuro uppercase tracking-wide mb-1 flex items-center gap-1">
+                <span aria-hidden="true">💡</span> ¿Sabías que...?
               </p>
               <p className="text-sm text-unicauca-grisOscuro font-lato leading-relaxed">
                 {pieza.dato_curioso}
@@ -206,20 +214,20 @@ function Datos({ pieza }) {
 
 Datos.propTypes = {
   pieza: PropTypes.shape({
-    nombre:              PropTypes.string,
-    numero_catalogo:     PropTypes.string,
-    cultura:             PropTypes.string,
-    periodo_historico:   PropTypes.string,
-    lugar_hallazgo:      PropTypes.string,
-    dimensiones:         PropTypes.string,
-    material:            PropTypes.string,
-    descripcion:         PropTypes.string,
-    descripcion_cultural:PropTypes.string,
-    usos:                PropTypes.string,
-    relevancia_educativa:PropTypes.string,
-    dato_curioso:        PropTypes.string,
-    modelo_3d_url:       PropTypes.string,
-    modelo_3d_tipo:      PropTypes.oneOf(['gaussian_splat', 'ply', 'glb', 'gltf']),
+    nombre:               PropTypes.string,
+    numero_catalogo:      PropTypes.string,
+    cultura:              PropTypes.string,
+    periodo_historico:    PropTypes.string,
+    lugar_hallazgo:       PropTypes.string,
+    dimensiones:          PropTypes.string,
+    material:             PropTypes.string,
+    descripcion:          PropTypes.string,
+    descripcion_cultural: PropTypes.string,
+    usos:                 PropTypes.string,
+    relevancia_educativa: PropTypes.string,
+    dato_curioso:         PropTypes.string,
+    modelo_3d_url:        PropTypes.string,
+    modelo_3d_tipo:       PropTypes.oneOf(['gaussian_splat', 'ply', 'glb', 'gltf']),
   }).isRequired,
 };
 

@@ -13,6 +13,7 @@ import Patia from './Screens/Secundarias/Patia';
 import Tumaco from './Screens/Secundarias/Tumaco';
 import TierraAdentro from './Screens/Secundarias/TierraAdentro';
 import Quimbaya from './Screens/Secundarias/Quimbaya';
+import NotFound from './Screens/NotFound';
 
 import {
   BrowserRouter as Router,
@@ -43,7 +44,7 @@ function App() {
             <Route path='/Tumaco' element={<Tumaco />} />
             <Route path='/TierraAdentro' element={<TierraAdentro />} />
             <Route path='/Quimbaya' element={<Quimbaya />} />
-
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
       </Router>

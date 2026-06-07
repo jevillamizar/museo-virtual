@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Volante3Canvas from "../canvas/Volante3";
+import Hint3D from "../UI/Hint3D";
 
 function Recuadro3D(props) {
-    
+    const [hintVisible, setHintVisible] = useState(true);
     const linkPath = `/${props.link}`;
 
     return (
@@ -17,8 +19,12 @@ function Recuadro3D(props) {
                 </div>
             </div>
             
-            <div className='w-full md:w-3/7 flex items-center justify-center'>
-                <Volante3Canvas /> 
+            <div
+                className='relative w-full md:w-3/7 flex items-center justify-center'
+                onPointerDown={() => setHintVisible(false)}
+            >
+                <Volante3Canvas />
+                {hintVisible && <Hint3D onFirstInteraction={() => setHintVisible(false)} />}
             </div>
             
         </div>
