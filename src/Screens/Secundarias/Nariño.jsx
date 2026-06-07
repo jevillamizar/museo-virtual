@@ -77,18 +77,8 @@ const Narino = () => {
         
         <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
           <Infotext
-            titulo='Nariño'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            titulo='El Altiplano Nariñense y sus Volantes'
+            parrafo='Las culturas del altiplano nariñense desarrollaron una notable tradición cerámica con fuertes vínculos con las culturas andinas del sur. Sus volantes de huso presentan formas y decoraciones particulares que reflejan influencias tanto locales como de grupos del actual Ecuador, evidenciando redes de intercambio cultural y comercial de larga distancia.'
           />
         </div>
 
@@ -106,11 +96,7 @@ const Narino = () => {
 
             <Texto
               titulo=''
-              parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos'
+              parrafo='Los volantes nariñenses son especialmente conocidos por sus diseños policromos con base negativa, técnica en la que el diseño se obtiene cubriendo partes de la pieza durante el proceso de cocción, creando contrastes visuales de gran belleza.'
             />
         </div>
 
@@ -124,9 +110,7 @@ const Narino = () => {
           
           <Texto
             titulo=''
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            parrafo='La conexión de las culturas nariñenses con el mundo andino del sur se refleja no solo en sus cerámicas sino también en sus prácticas textiles, compartidas con comunidades del actual Ecuador y Perú a lo largo de extensas rutas de comercio e intercambio.'
           />
         </div>
 

@@ -76,18 +76,8 @@ const Popayan = () => {
         </div>
         <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
           <Infotext
-            titulo='Popayán'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            titulo='Popayán y sus Volantes de Huso'
+            parrafo='Popayán, la "Ciudad Blanca" del sur de Colombia, fue un importante centro cultural y de intercambio durante el período prehispánico. Los volantes de huso encontrados en esta zona muestran la influencia de diversas tradiciones cerámicas andinas y evidencian una activa producción textil que perduró por siglos.'
           />
         </div>
 
@@ -105,11 +95,7 @@ const Popayan = () => {
 
             <Texto
               titulo=''
-              parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos'
+              parrafo='Los volantes de huso de Popayanmás representativos presentan formas troncocónicas y discoidales. Su decoración geométrica, obtenida mediante incisiones e impresiones, refleja la destreza técnica de sus artesanos y las concepciones simbólicas propias de la región andina caucana.'
             />
         </div>
 
@@ -123,9 +109,7 @@ const Popayan = () => {
           
           <Texto
             titulo=''
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            parrafo='El tamaño y el peso del volante determinaban el grosor del hilo resultante. Piezas más pesadas producían hilos gruesos para tejidos resistentes, mientras que las más ligeras permitían obtener fibras finas de alta calidad para textiles ceremoniales.'
           />
         </div>
 

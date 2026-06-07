@@ -77,18 +77,8 @@ const Patia = () => {
         
         <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
           <Infotext
-            titulo='Patía'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            titulo='El Valle del Patía: Tradición e Identidad'
+            parrafo='El valle del río Patía, enclavado entre la cordillera Occidental y Central del Cauca, fue hogar de comunidades que desarrollaron sus propias tradiciones textiles. Los volantes de huso de esta región reflejan la identidad cultural de sus habitantes y su adaptación a las condiciones particulares de este territorio interandino cálido y biodiverso.'
           />
         </div>
 
@@ -106,11 +96,7 @@ const Patia = () => {
 
             <Texto
               titulo=''
-              parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos'
+              parrafo='Las piezas del valle del Patía muestran una cerámica de tradición local con formas adaptadas a las fibras disponibles en este ecosistema interandino. El algodón y la cabuya fueron las principales materias primas para los tejidos de esta región.'
             />
         </div>
 
@@ -124,9 +110,7 @@ const Patia = () => {
           
           <Texto
             titulo=''
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            parrafo='El territorio cálido del valle del Patía favorecía el cultivo de algodón, convirtiendo a estas comunidades en productoras textiles de importancia regional. Sus volantes de huso son parte de ese legado de trabajo artésanal que aún persiste en la memoria colectiva del Cauca.'
           />
         </div>
 

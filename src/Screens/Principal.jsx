@@ -4,6 +4,7 @@ import Recuadro360 from "../Componentes/3D/Recuadro360";
 import HojaLibro from "../Componentes/2D/HojaLibro";
 import Texto from "../Componentes/Text/Texto";
 import Card from "../Componentes/2D/Card";
+import SeccionEducativa from "../Componentes/2D/SeccionEducativa";
 
 // Librerias Mapa
 import MapI from "../Componentes/Map/MapI";
@@ -20,14 +21,14 @@ const Principal = () => {
   });
 
   const cards = [
-    { imagen: 'calima', link: 'Calima', titulo: 'CALIMA', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
-    { imagen: 'patia', link: 'Patia', titulo: 'PATÍA', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
-    { imagen: 'popayan', link: 'TierraAdentro', titulo: 'TIERRADENTRO', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
-    { imagen: 'volantetra', link: 'Quimbaya', titulo: 'QUIMBAYA', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
-    { imagen: 'calima', link: 'Tumaco', titulo: 'TUMACO', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
-    { imagen: 'volantefron', link: 'Corinto', titulo: 'CORINTO', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
-    { imagen: 'popayan', link: 'Popayan', titulo: 'POPAYÁN', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
-    { imagen: 'volantefron', link: 'Nariño', titulo: 'NARIÑO', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },
+    { imagen: 'popayan', link: 'Popayan', titulo: 'POPAYÁN', parrafo: 'Centro histórico y cultural del Cauca. Sus volantes de huso reflejan la rica tradición cerámica de la región andina caucana.' },
+    { imagen: 'calima', link: 'Calima', titulo: 'CALIMA', parrafo: 'Cultura del valle del río Calima en el Valle del Cauca. Reconocida por su extraordinaria orfebrería y cerámica finamente decorada.' },
+    { imagen: 'volantefron', link: 'Corinto', titulo: 'CORINTO', parrafo: 'Asentamientos del norte del Cauca. Sus piezas evidencian intercambios culturales entre grupos de la cordillera y el valle del río Cauca.' },
+    { imagen: 'volantefron', link: 'Nariño', titulo: 'NARIÑO', parrafo: 'Culturas del altiplano nariñense. Sus volantes muestran influencias de las tradiciones andinas del sur y conexiones con culturas de Ecuador.' },
+    { imagen: 'patia', link: 'Patia', titulo: 'PATÍA', parrafo: 'Valle del río Patía en el Cauca. Sus piezas reflejan las tradiciones de los pueblos que habitaron esta región interandina.' },
+    { imagen: 'calima', link: 'Tumaco', titulo: 'TUMACO', parrafo: 'Costa Pacífica nariñense. La cultura Tumaco-La Tolita produjo cerámica de notable calidad con representaciones humanas únicas en la arqueología colombiana.' },
+    { imagen: 'popayan', link: 'TierraAdentro', titulo: 'TIERRADENTRO', parrafo: 'Famosa por sus hipogeos y estatuaria. Sus volantes de huso son testimonio de una sociedad con profunda vida espiritual y sofisticadas prácticas funerarias.' },
+    { imagen: 'volantetra', link: 'Quimbaya', titulo: 'QUIMBAYA', parrafo: 'Conocida por su maestría en orfebrería. Sus volantes muestran la habilidad técnica y estética de uno de los pueblos más refinados del occidente colombiano.' },
   ];
 
   const settings = {
@@ -63,47 +64,31 @@ const Principal = () => {
             imagen='PanoramaInterior'
             titulo='CERAMOTECA'
             subtitulo='UNIVERSIDAD DEL CAUCA'
-            parrafo='Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos'
-            link='Page'
+            parrafo='La Ceramoteca del Museo de Historia Natural de la Universidad del Cauca alberga una de las colecciones más importantes de cerámica prehispánica del suroccidente colombiano. Este espacio de investigación y conservación custodia piezas que dan cuenta de la diversidad cultural y tecnológica de los pueblos que habitaron esta región durante miles de años.'
+            link='Ceramoteca'
           />
         </section>
 
-        <section aria-label="Sobre la Ceramoteca" className="mt-14 lg:mt-16 flex justify-center items-center w-full">
-          <Recuadro
-            imagen='ceramoteca'
-            titulo='CERAMOTECA'
-            subtitulo='UNIVERSIDAD DEL CAUCA'
-            parrafo='Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos'
-            link='Page'
-          />
-        </section>
-
-        <section aria-label="Colecciones del museo" className='flex flex-col sm:flex-row justify-center items-center w-full'>
+        <section aria-label="Colecciones del museo" className='flex flex-col sm:flex-row justify-center items-stretch w-full'>
           <HojaLibro
             imagen='ceramoteca'
-            titulo='TEXTILES EN LA ARQUEOLOGÍA'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos'
-            link='Page'
+            titulo='Textiles en la Arqueología del Suroccidente Colombiano'
+            parrafo='El tejido fue una de las prácticas culturales más importantes de las sociedades prehispánicas del suroccidente colombiano. A través de fibras vegetales y animales, estas comunidades no solo cubrían sus cuerpos, sino que expresaban su identidad, su espiritualidad y su organización social. Los objetos relacionados con la producción textil, como los volantes de huso, son hoy testimonios materiales de esa riqueza cultural.'
+            link='Textiles'
           />
           <HojaLibro
             imagen='coleccion'
-            titulo='LA COLECCIÓN DE VOLANTES DE HUSO'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos'
-            link='Popayan'
+            titulo='La Colección de Volantes de Huso'
+            parrafo='El Museo de Historia Natural de la Universidad del Cauca conserva una colección de volantes de huso provenientes de diversas culturas del suroccidente colombiano. Estas pequeñas piezas de cerámica, piedra o hueso fueron utilizadas para hilar fibras y representan un valioso registro de las técnicas textiles prehispánicas de la región. Cada pieza es única y refleja las tradiciones artesanales de su cultura de origen.'
+            link='Volantes'
           />
         </section>
 
         <section aria-label="Áreas arqueológicas de Colombia" className='flex flex-col sm:flex-row justify-center items-center w-full'>
           <MapI />
           <Texto
-            titulo='AREAS ARQUEOLOGICAS DE COLOMBIA'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            titulo='Áreas Arqueológicas del Suroccidente Colombiano'
+            parrafo='Las piezas de nuestra colección provienen de ocho zonas arqueológicas del suroccidente colombiano: Popayán, Calima, Corinto, Nariño, Patía, Tumaco, Tierradentro y Quimbaya. Cada zona tiene características únicas que se reflejan en la forma, decoración y materiales de sus volantes de huso.'
           />
         </section>
 
@@ -116,6 +101,8 @@ const Principal = () => {
             ))}
           </Slider>
         </section>
+
+        <SeccionEducativa />
 
       </main>
     </div>

@@ -77,18 +77,8 @@ const Tumaco = () => {
         
         <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
           <Infotext
-            titulo='Tumaco'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            titulo='Tumaco-La Tolita: Arte y Textil en la Costa Pacífica'
+            parrafo='La cultura Tumaco-La Tolita, desarrollada en la costa Pacífica entre el sur de Colombia y el norte de Ecuador, produjo una cerámica de extraordinaria calidad. Sus volantes de huso, junto con las famosas figurinas antropomorfas, son testimonio de una sociedad compleja con profundas tradiciones artísticas y artesanales que se extendieron por toda la costa del Pacífico.'
           />
         </div>
 
@@ -106,11 +96,7 @@ const Tumaco = () => {
 
             <Texto
               titulo=''
-              parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos'
+              parrafo='Los volantes de Tumaco se distinguen por su finura y la calidad de su acabado. Muchos presentan representaciones humanas y animales en miniatura que conectan el instrumento de trabajo con la visión espiritual del mundo que tenían estas comunidades costeras.'
             />
         </div>
 
@@ -124,9 +110,7 @@ const Tumaco = () => {
           
           <Texto
             titulo=''
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            parrafo='El acceso al Pacífico permitió a los pueblos Tumaco obtener fibras vegetales tropicales y mantener rutas marítimas de intercambio que llegaban hasta Mesoamérica. Esta conectividad se refleja en la diversidad técnica y simbólica de su cerámica.'
           />
         </div>
 

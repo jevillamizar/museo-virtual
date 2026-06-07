@@ -35,8 +35,8 @@ const Navbar1 = () => {
     <div className='lg:hidden block absolute top-12 w-full left-0 right-0 bg-unicauca-azul opacity-95 transition'>
       <ul className='text-center text-2xl p-20'>
         <li className='my-4 py-4 hover:bg-unicauca-azulhover hover:rounded' onClick={handleClick}>
-          <Link to='/Page'>
-            <strong>Volantes de uso</strong>
+          <Link to='/Volantes'>
+            <strong>Volantes de huso</strong>
           </Link>
         </li>
         <li className='my-4 py-4 hover:bg-unicauca-azulhover hover:rounded' onClick={handleClick}>
@@ -65,7 +65,7 @@ const Navbar1 = () => {
           <div className='flex-10'>
             <ul className='flex gap-8 lg:mr-16 text-[22px]'>
               <li className='hover:bg-unicauca-azulhover hover:rounded transition cursor-pointer px-3 py-1' onClick={handleClick}>
-                <Link to='/Page'>
+                <Link to='/Volantes'>
                   <strong>Volantes</strong>
                 </Link>
               </li>

@@ -77,18 +77,8 @@ const Quimbaya = () => {
         
         <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
           <Infotext
-            titulo='Quimbaya'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            titulo='Los Quimbaya: Maestros del Hilo y el Metal'
+            parrafo='Los Quimbaya, célebres por su incomparable maestría en la orfebrería, también desarrollaron sofisticadas técnicas textiles. Sus volantes de huso, elaborados con gran cuidado técnico y estético, reflejan la habilidad artesanal de uno de los pueblos más refinados del occidente colombiano. El tejido y el metal eran en su cultura expresiones complementarias de una misma búsqueda de belleza y significado.'
           />
         </div>
 
@@ -106,11 +96,7 @@ const Quimbaya = () => {
 
             <Texto
               titulo=''
-              parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos'
+              parrafo='Los volantes Quimbaya presentan formas depuradas y superficies pulidas que revelan el refinamiento técnico de sus creadores. Al igual que sus célebres piezas de oro, estos instrumentos de hilado eran elaborados con una precisión y estética fuera de lo común para la época.'
             />
         </div>
 
@@ -124,9 +110,7 @@ const Quimbaya = () => {
           
           <Texto
             titulo=''
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            parrafo='La fama de los Quimbaya trasciende el oro. Su dominio del tejido fue igualmente notable: producían telas de alta calidad que eran bienes de lujo e intercambio entre las sociedades del occidente colombiano. El volante de huso era la herramienta central de esa práctica.'
           />
         </div>
 

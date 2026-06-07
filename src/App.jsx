@@ -4,7 +4,9 @@ import Navbar1 from './Componentes/Navbar1';
 import Home from './Screens/Home';
 import Principal from './Screens/Principal';
 import Contact from './Screens/Contact';
-import Page from './Screens/Page';
+import Volantes from './Screens/Volantes';
+import Ceramoteca from './Screens/Ceramoteca';
+import Textiles from './Screens/Textiles';
 import Popayan from './Screens/Secundarias/Popayan';
 import Calima from './Screens/Secundarias/Calima';
 import Corinto from './Screens/Secundarias/Corinto';
@@ -33,7 +35,9 @@ function App() {
           {/* Vinculación de las páginas */}
           <Routes>
             <Route path='/' element={<Principal />} />
-            <Route path='/Page' element={<Page />} />
+            <Route path='/Volantes' element={<Volantes />} />
+            <Route path='/Ceramoteca' element={<Ceramoteca />} />
+            <Route path='/Textiles' element={<Textiles />} />
             <Route path='/Contact' element={<Contact />} />
             <Route path='/About' element={<Home />} />
             <Route path='/Popayan' element={<Popayan />} />

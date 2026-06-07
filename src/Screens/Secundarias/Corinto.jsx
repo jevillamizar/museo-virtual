@@ -77,18 +77,8 @@ const Corinto = () => {
         
         <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
           <Infotext
-            titulo='Corinto'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            titulo='Corinto: Cruce de Culturas en el Norte del Cauca'
+            parrafo='El norte del Cauca fue un territorio de encuentros e intercambios entre diversas comunidades prehispánicas. Los volantes de huso hallados en Corinto y sus alrededores evidencian estas conexiones culturales, mostrando características técnicas de grupos de la cordillera y el valle del río Cauca. Su cerámica es testimonio de una región dinámica y culturalmente diversa.'
           />
         </div>
 
@@ -106,11 +96,7 @@ const Corinto = () => {
 
             <Texto
               titulo=''
-              parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos'
+              parrafo='Los volantes de Corinto presentan una notable variedad morfológica que refleja su posición como zona de intercambio. Se encuentran formas cónicas, discoidales y esféricas, con decoraciones que mezclan tradiciones de la cordillera y el valle interandino.'
             />
         </div>
 
@@ -124,9 +110,7 @@ const Corinto = () => {
           
           <Texto
             titulo=''
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            parrafo='La riqueza cerámica del norte del Cauca sugiere que estas comunidades participaban activamente en redes de intercambio regional, llevando consigo técnicas, diseños y tradiciones textiles a lo largo del corredor del río Cauca.'
           />
         </div>
 

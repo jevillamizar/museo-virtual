@@ -77,18 +77,8 @@ const Calima = () => {
         
         <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
           <Infotext
-            titulo='Calima'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            titulo='La Cultura Calima y sus Tradiciones Textiles'
+            parrafo='La cultura Calima, desarrollada en el valle del río del mismo nombre en el actual Valle del Cauca, es reconocida mundialmente por su extraordinaria producción en oro y cerámica. Sus volantes de huso, frecuentemente decorados con motivos geométricos, reflejan la sofisticación técnica y estética de sus artesanos y la importancia del tejido en su vida cotidiana y ceremonial.'
           />
         </div>
 
@@ -106,11 +96,7 @@ const Calima = () => {
 
             <Texto
               titulo=''
-              parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos'
+              parrafo='Los volantes Calima destacan por su variedad formal: discoidales, troncopiramidales y esféricos. Muchos presentan decoraciones incisas con líneas paralelas y reticulados que caracterizan el estilo cerámico de esta cultura del Pacífico colombiano.'
             />
         </div>
 
@@ -124,9 +110,7 @@ const Calima = () => {
           
           <Texto
             titulo=''
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            parrafo='La presencia de estos instrumentos de hilado en contextos domésticos y funerarios confirma que la producción textil era fundamental tanto para la vida diaria como para los rituales y el intercambio comercial entre comunidades Calima.'
           />
         </div>
 

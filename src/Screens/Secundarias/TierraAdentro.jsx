@@ -77,18 +77,8 @@ const TierraAdentro = () => {
         
         <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
           <Infotext
-            titulo='Tierradentro'
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            titulo='Tierradentro: Espiritualidad y Producción Textil'
+            parrafo='Tierradentro, famosa por sus monumentales hipogeos declarados Patrimonio de la Humanidad, también nos legó una rica tradición de producción textil. Los volantes de huso encontrados en esta región, frecuentemente asociados a contextos funerarios, sugieren que el hilado y el tejido tenían un profundo significado espiritual para sus habitantes, más allá de su función práctica cotidiana.'
           />
         </div>
 
@@ -106,11 +96,7 @@ const TierraAdentro = () => {
 
             <Texto
               titulo=''
-              parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos
-              Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-              sobre los pingüinos, los Curiosidades sobre los pingüinos'
+              parrafo='Los volantes de Tierradentro hallados en contextos funerarios evidencian que el tejido acompañaba a los difuntos en su traspaso al otro mundo. Esta práctica indica que los textiles eran bienes de alto valor simbólico, ligados a la identidad y al ciclo vital de las personas.'
             />
         </div>
 
@@ -124,9 +110,7 @@ const TierraAdentro = () => {
           
           <Texto
             titulo=''
-            parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
-            Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
-            sobre los pingüinos, los Curiosidades sobre los pingüinos'
+            parrafo='La arquitectura subterránea de los hipogeos de Tierradentro es uno de los testimonios más impresionantes de las culturas prehispánicas colombianas. En estos espacios, junto con las ofrendas cerámicas, los volantes de huso representaban la vida productiva y espiritual de sus constructores.'
           />
         </div>
 

@@ -5,33 +5,35 @@ function HojaLibro(props) {
   const imagenPath = `/imagenes/${props.imagen}.png`;
 
   return (
-    <div className='w-3/4 sm:w-1/3 lg:w-1/4 mx-5 md:mx-10 my-10 md:my-50 max-w-screen-lg 
+    <div className='w-3/4 sm:w-1/3 lg:w-1/4 mx-5 md:mx-10 my-10 flex flex-col h-full
     bg-white shadow-lg overflow-hidden rounded-lg border-2 border-gray-300'>
-      <div className='w-full object-cover'>
-        <div className='text-center p-5 md:p-5 font-lato font-normal leading-6'>
-          <p className='text-2xl font-semibold pt-2 pb-3 md:pb-5'>{props.titulo}</p>
 
-          <div className='w-full flex justify-center items-center pb-2 lg:pb-0' style={{ height: '200px' }}>
-            <img
-              className='w-full h-full'
-              src={imagenPath}
-              alt='Imagen recuadro'
-            />
-          </div>
+      <div className='w-full h-44 sm:h-36 lg:h-44 flex-shrink-0 overflow-hidden'>
+        <img
+          className='w-full h-full object-cover'
+          src={imagenPath}
+          alt='Imagen recuadro'
+        />
+      </div>
 
-          <div className='w-full flex justify-center items-center mt-2 md:mt-0 pb-4 md:pb-0' style={{ height: '150px' }}>
-            <p className='text-base text-justify'>{props.parrafo}</p>
-          </div>
+      <div className='flex flex-col flex-1 p-5 font-lato font-normal leading-6 gap-3'>
+        <p className='text-xl font-semibold text-center'>{props.titulo}</p>
 
-          {props.link && (
+        <p className='text-sm text-justify text-unicauca-grisOscuro
+          line-clamp-4 sm:line-clamp-5 lg:line-clamp-6 flex-1'>
+          {props.parrafo}
+        </p>
+
+        {props.link && (
+          <div className='flex justify-center pt-1'>
             <Link
-              className='text-white text-left bg-unicauca-azul hover:bg-unicauca-azulhover border-unicauca-azul border-2 rounded-lg p-2 transition-colors duration-200'
+              className='text-white bg-unicauca-azul hover:bg-unicauca-azulhover border-unicauca-azul border-2 rounded-lg px-4 py-2 text-sm transition-colors duration-200'
               to={props.link}
             >
               Conoce más
             </Link>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );
