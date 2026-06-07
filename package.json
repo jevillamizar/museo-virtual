@@ -14,6 +14,7 @@
     "@emailjs/browser": "^4.3.3",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@mkkellogg/gaussian-splats-3d": "^0.4.7",
     "@mui/material": "^5.15.20",
     "@react-three/drei": "^9.106.0",
     "@react-three/fiber": "^8.16.8",
