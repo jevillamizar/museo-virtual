@@ -5,7 +5,7 @@ function Contenedor(props) {
     const imagenPath = `/imagenes/${props.imagen}.png`;
 
     return (
-        <div className='w-full mx-10 my-10 md:my-50 max-w-screen-lg flex flex-col md:flex-row bg-slate-400 rounded-lg shadow-lg overflow-hidden'>
+        <div className='w-full mx-10 my-10 md:my-50 max-w-screen-lg flex flex-col md:flex-row bg-white border border-unicauca-grisClaro rounded-lg shadow-md overflow-hidden'>
             
             <div className='w-full md:w-1/2 flex items-center justify-center'>
                 <img

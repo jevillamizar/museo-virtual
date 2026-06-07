@@ -25,7 +25,7 @@ function HojaLibro(props) {
 
           {props.link && (
             <Link
-              className='text-white text-left bg-green-600 border-gray-500 border-2 rounded-lg p-2'
+              className='text-white text-left bg-unicauca-azul hover:bg-unicauca-azulhover border-unicauca-azul border-2 rounded-lg p-2 transition-colors duration-200'
               to={props.link}
             >
               Conoce más
