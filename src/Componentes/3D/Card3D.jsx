@@ -15,7 +15,7 @@ function Card3D(props) {
   const CanvasComponent = canvasComponents[props.imagen];
 
   return (
-    <div className='w-3/4 mx-10 my-10 md:my-50 max-w-screen-lg flex flex-col md:flex-row bg-slate-400 shadow-lg overflow-hidden'>
+    <div className='w-3/4 mx-10 my-10 md:my-50 max-w-screen-lg flex flex-col md:flex-row bg-white border border-unicauca-grisClaro shadow-lg overflow-hidden'>
       <div className='w-full'>
         <div className='text-center p-5 md:p-5 font-lato font-normal leading-6'>
           <p className='text-2xl font-semibold pb-3 md:pb-1'>{props.titulo}</p>

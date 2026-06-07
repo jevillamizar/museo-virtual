@@ -6,7 +6,7 @@ function Recuadro3D(props) {
     const linkPath = `/${props.link}`;
 
     return (
-        <div className='w-full mx-10 my-10 md:my-50 max-w-screen-lg flex flex-col md:flex-row bg-slate-400 rounded-lg shadow-lg overflow-hidden'>
+        <div className='w-full mx-10 my-10 md:my-50 max-w-screen-lg flex flex-col md:flex-row bg-white border border-unicauca-grisClaro rounded-lg shadow-lg overflow-hidden'>
             
             <div className='w-full md:w-4/7'>
                 <div className='text-center p-10 md:p-10 font-lato font-normal leading-6'>
