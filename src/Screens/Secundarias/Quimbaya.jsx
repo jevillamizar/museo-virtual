@@ -1,52 +1,69 @@
+import { useEffect, useState, useCallback } from 'react';
+import { getPiezasPorCultura } from '../../supabaseClient';
 import Infotext from "../../Componentes/Text/Infotext";
 import Texto from "../../Componentes/Text/Texto";
 import Boxtext from "../../Componentes/Text/Boxtext";
 import Datos from "../../Componentes/3D/Datos";
-import { useEffect, useState } from 'react';
-import { supabase } from '../../supabaseClient';
+import LoadingPage from "../../Componentes/UI/LoadingPage";
 
-const Popayan = () => {
+const Quimbaya = () => {
   const [data, setData] = useState([]);
   const [selectedDoc, setSelectedDoc] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [fetchError, setFetchError] = useState(null);
+
+  const loadData = useCallback(async () => {
+    setLoading(true);
+    setFetchError(null);
+    const { data: piezas, error } = await getPiezasPorCultura('Quimbaya');
+    if (error) {
+      setFetchError('No se pudieron cargar las piezas. Intenta de nuevo más tarde.');
+      setLoading(false);
+      return;
+    }
+    setData(piezas || []);
+    if (piezas && piezas.length > 0) {
+      setSelectedDoc(piezas[0]);
+    }
+    setLoading(false);
+  }, []);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data: dataArray, error } = await supabase.from('InfoVolante').select('*');
-        if (error) {
-          throw error;
-        }
-        setData(dataArray);
-        if (dataArray.length > 0) {
-          setSelectedDoc(dataArray[0]);
-        }
-        setLoading(false);
-      } catch (error) {
-        console.error("Error al obtener los documentos: ", error);
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+    loadData();
+  }, [loadData]);
 
   const handleSelectChange = (e) => {
     const selectedId = e.target.value;
-    const selectedDocument = data.find(doc => doc.id === selectedId);
+    const selectedDocument = data.find(doc => String(doc.id) === selectedId);
     setSelectedDoc(selectedDocument);
   };
 
-  if (loading) {
-    return <div>Loading...</div>;
+  if (loading) return <LoadingPage />;
+
+  if (fetchError) {
+    return (
+      <div className='min-h-screen flex items-center justify-center bg-unicauca-blancoRoto'>
+        <div className='text-center p-8 bg-white rounded-lg shadow-md border border-red-200 max-w-md'>
+          <p className='text-unicauca-rojo font-semibold text-lg mb-2'>No se pudieron cargar las piezas</p>
+          <p className='text-unicauca-grisMedio text-sm mb-6'>{fetchError}</p>
+          <button
+            onClick={loadData}
+            className='px-5 py-2 bg-unicauca-azul hover:bg-unicauca-azulhover text-white text-sm font-semibold rounded-md transition-colors'
+          >
+            Reintentar
+          </button>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className='min-h-screen flex flex-wrap items-center justify-center text-center p-4'>
+    <div className='min-h-screen flex flex-wrap items-center justify-center text-center p-4 bg-unicauca-blancoRoto'>
       <div className='min-h-600 flex flex-wrap items-center justify-center'>
         
         <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
           <Infotext
-            titulo='Popayán'
+            titulo='Quimbaya'
             parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos 
             Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
             sobre los pingüinos, los Curiosidades sobre los pingüinos
@@ -99,27 +116,34 @@ const Popayan = () => {
           />
         </div>
 
-        <div className='flex justify-center w-full pt-16'>
-          <select onChange={handleSelectChange} className='mb-4 p-2 border border-gray-400'>
-            <option value="" disabled>Seleccione un documento</option>
-            {data.map((item) => (
-              <option key={item.id} value={item.id}>{item.nombre}</option>
-            ))}
-          </select>
-        </div>
-        
-        {selectedDoc && (
-          <Datos
-            nombre={selectedDoc.nombre}
-            obtencion={selectedDoc.obtencion}
-            origen={selectedDoc.origen}
-            temporalidad={selectedDoc.temporalidad}
-            tipo={selectedDoc.tipo}
-          />
+        {data.length === 0 ? (
+          <div className='flex justify-center w-full pt-16'>
+            <p className='text-unicauca-grisOscuro text-lg'>
+              No hay piezas registradas para esta área todavía.
+            </p>
+          </div>
+        ) : (
+          <>
+            <div className='flex justify-center w-full pt-16'>
+              <select
+                onChange={handleSelectChange}
+                className='mb-4 p-2 border-2 border-unicauca-azul rounded-md text-unicauca-grisOscuro focus:outline-none focus:ring-2 focus:ring-unicauca-azul'
+              >
+                <option value="" disabled>Seleccione un documento</option>
+                {data.map((item) => (
+                  <option key={item.id} value={String(item.id)}>{item.nombre}</option>
+                ))}
+              </select>
+            </div>
+
+            {selectedDoc && (
+              <Datos pieza={selectedDoc} />
+            )}
+          </>
         )}
       </div>
     </div>
   );
 }
 
-export default Popayan;
+export default Quimbaya;
