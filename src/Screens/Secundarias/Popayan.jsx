@@ -76,7 +76,7 @@ const Popayan = () => {
             { label: 'Popayán', path: '/Popayan' },
           ]} />
         </div>
-        <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
+        <div className="section-gap flex justify-center items-center w-full">
           <Infotext
             titulo='Popayán y sus Volantes de Huso'
             parrafo='Popayán, la "Ciudad Blanca" del sur de Colombia, fue un importante centro cultural y de intercambio durante el período prehispánico. Los volantes de huso encontrados en esta zona muestran la influencia de diversas tradiciones cerámicas andinas y evidencian una activa producción textil que perduró por siglos.'

@@ -77,7 +77,7 @@ const TierraAdentro = () => {
           ]} />
         </div>
         
-        <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
+        <div className="section-gap flex justify-center items-center w-full">
           <Infotext
             titulo='Tierradentro: Espiritualidad y Producción Textil'
             parrafo='Tierradentro, famosa por sus monumentales hipogeos declarados Patrimonio de la Humanidad, también nos legó una rica tradición de producción textil. Los volantes de huso encontrados en esta región, frecuentemente asociados a contextos funerarios, sugieren que el hilado y el tejido tenían un profundo significado espiritual para sus habitantes, más allá de su función práctica cotidiana.'

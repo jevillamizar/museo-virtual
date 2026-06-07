@@ -77,7 +77,7 @@ const Narino = () => {
           ]} />
         </div>
         
-        <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
+        <div className="section-gap flex justify-center items-center w-full">
           <Infotext
             titulo='El Altiplano Nariñense y sus Volantes'
             parrafo='Las culturas del altiplano nariñense desarrollaron una notable tradición cerámica con fuertes vínculos con las culturas andinas del sur. Sus volantes de huso presentan formas y decoraciones particulares que reflejan influencias tanto locales como de grupos del actual Ecuador, evidenciando redes de intercambio cultural y comercial de larga distancia.'

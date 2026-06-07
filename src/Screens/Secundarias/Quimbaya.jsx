@@ -77,7 +77,7 @@ const Quimbaya = () => {
           ]} />
         </div>
         
-        <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
+        <div className="section-gap flex justify-center items-center w-full">
           <Infotext
             titulo='Los Quimbaya: Maestros del Hilo y el Metal'
             parrafo='Los Quimbaya, célebres por su incomparable maestría en la orfebrería, también desarrollaron sofisticadas técnicas textiles. Sus volantes de huso, elaborados con gran cuidado técnico y estético, reflejan la habilidad artesanal de uno de los pueblos más refinados del occidente colombiano. El tejido y el metal eran en su cultura expresiones complementarias de una misma búsqueda de belleza y significado.'

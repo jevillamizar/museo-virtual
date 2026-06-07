@@ -77,7 +77,7 @@ const Corinto = () => {
           ]} />
         </div>
         
-        <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
+        <div className="section-gap flex justify-center items-center w-full">
           <Infotext
             titulo='Corinto: Cruce de Culturas en el Norte del Cauca'
             parrafo='El norte del Cauca fue un territorio de encuentros e intercambios entre diversas comunidades prehispánicas. Los volantes de huso hallados en Corinto y sus alrededores evidencian estas conexiones culturales, mostrando características técnicas de grupos de la cordillera y el valle del río Cauca. Su cerámica es testimonio de una región dinámica y culturalmente diversa.'

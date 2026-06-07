@@ -77,7 +77,7 @@ const Calima = () => {
           ]} />
         </div>
         
-        <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
+        <div className="section-gap flex justify-center items-center w-full">
           <Infotext
             titulo='La Cultura Calima y sus Tradiciones Textiles'
             parrafo='La cultura Calima, desarrollada en el valle del río del mismo nombre en el actual Valle del Cauca, es reconocida mundialmente por su extraordinaria producción en oro y cerámica. Sus volantes de huso, frecuentemente decorados con motivos geométricos, reflejan la sofisticación técnica y estética de sus artesanos y la importancia del tejido en su vida cotidiana y ceremonial.'

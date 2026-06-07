@@ -77,7 +77,7 @@ const Patia = () => {
           ]} />
         </div>
         
-        <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
+        <div className="section-gap flex justify-center items-center w-full">
           <Infotext
             titulo='El Valle del Patía: Tradición e Identidad'
             parrafo='El valle del río Patía, enclavado entre la cordillera Occidental y Central del Cauca, fue hogar de comunidades que desarrollaron sus propias tradiciones textiles. Los volantes de huso de esta región reflejan la identidad cultural de sus habitantes y su adaptación a las condiciones particulares de este territorio interandino cálido y biodiverso.'

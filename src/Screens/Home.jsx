@@ -35,7 +35,7 @@ const Home = () => {
   
   return (
     <>
-    <div className='min-h-screen flex flex-wrap items-center justify-center text-center'>
+    <div className='min-h-screen flex flex-wrap items-center justify-center text-center section-gap'>
       <div className='min-h-600 flex flex-wrap items-center justify-center'>
         
         <Informacion

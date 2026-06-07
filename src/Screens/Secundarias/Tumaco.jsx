@@ -77,7 +77,7 @@ const Tumaco = () => {
           ]} />
         </div>
         
-        <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
+        <div className="section-gap flex justify-center items-center w-full">
           <Infotext
             titulo='Tumaco-La Tolita: Arte y Textil en la Costa Pacífica'
             parrafo='La cultura Tumaco-La Tolita, desarrollada en la costa Pacífica entre el sur de Colombia y el norte de Ecuador, produjo una cerámica de extraordinaria calidad. Sus volantes de huso, junto con las famosas figurinas antropomorfas, son testimonio de una sociedad compleja con profundas tradiciones artísticas y artesanales que se extendieron por toda la costa del Pacífico.'

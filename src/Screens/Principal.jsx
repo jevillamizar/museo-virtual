@@ -61,7 +61,7 @@ const Principal = () => {
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center bg-unicauca-blancoRoto'>
       <main className='min-h-600 flex flex-wrap items-center justify-center w-full'>
 
-        <section aria-label="Presentación de la Ceramoteca" className="mt-14 lg:mt-16 flex justify-center items-center w-full">
+        <section aria-label="Presentación de la Ceramoteca" className="section-gap flex justify-center items-center w-full">
           <Recuadro360
             imagen='PanoramaInterior'
             titulo='CERAMOTECA'
@@ -71,7 +71,7 @@ const Principal = () => {
           />
         </section>
 
-        <section aria-label="Colecciones del museo" className='flex flex-col sm:flex-row justify-center items-stretch w-full'>
+        <section aria-label="Colecciones del museo" className='section-gap flex flex-col sm:flex-row justify-center items-stretch w-full'>
           <HojaLibro
             imagen='ceramoteca'
             titulo='Textiles en la Arqueología del Suroccidente Colombiano'
@@ -86,7 +86,7 @@ const Principal = () => {
           />
         </section>
 
-        <section aria-label="Áreas arqueológicas de Colombia" className='flex flex-col sm:flex-row justify-center items-center w-full'>
+        <section aria-label="Áreas arqueológicas de Colombia" className='section-gap flex flex-col sm:flex-row justify-center items-center w-full'>
           <MapI />
           <Texto
             titulo='Áreas Arqueológicas del Suroccidente Colombiano'
@@ -94,7 +94,7 @@ const Principal = () => {
           />
         </section>
 
-        <section aria-label="Culturas arqueológicas" className='w-full max-w-xs sm:max-w-screen-xs md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg px-4'>
+        <section aria-label="Culturas arqueológicas" className='section-gap w-full max-w-xs sm:max-w-screen-xs md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg px-4'>
           <Slider {...settings}>
             {cards.map((card, index) => (
               <div key={index}>
