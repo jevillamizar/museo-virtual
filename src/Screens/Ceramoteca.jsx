@@ -57,7 +57,7 @@ const Ceramoteca = () => {
 
         {/* Descripción ampliada */}
         <section className="w-full max-w-screen-md px-6 py-10 text-left">
-          <h2 className="text-2xl font-bold text-unicauca-verde mb-4">
+          <h2 className="text-2xl font-bold text-unicauca-verde mb-4 font-poppins">
             Un espacio para el patrimonio
           </h2>
           <p className="text-base text-unicauca-grisOscuro leading-relaxed mb-4">

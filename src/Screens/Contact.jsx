@@ -58,7 +58,7 @@ const Contact = () => {
 
         {/* Encabezado */}
         <section className="w-full bg-unicauca-azul py-12 px-6 text-center text-white">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">Contáctanos</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2 font-poppins">Contáctanos</h1>
           <p className="text-white/80 text-base max-w-xl mx-auto">
             ¿Tienes preguntas sobre la colección, quieres coordinar una visita educativa
             o simplemente deseas saber más? Escríbenos.

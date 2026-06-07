@@ -7,7 +7,7 @@ function Infotext(props) {
         
         <div className='w-full object-cover'>
           <div className='text-center p-5 md:p-5 font-lato font-normal leading-6'>
-            <p className='text-5xl md:text-5xl font-semibold text-left pb-3 md:pb-5'>{props.titulo}</p>
+            <p className='text-5xl md:text-5xl font-semibold text-left pb-3 md:pb-5 font-poppins'>{props.titulo}</p>
             <p className='text-base text-justify mt-4 pb-2 md:pb-4'>{props.parrafo}</p>
           </div>
         </div>

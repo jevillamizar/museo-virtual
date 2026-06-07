@@ -29,7 +29,7 @@ const SeccionEducativa = () => {
       className="w-full bg-unicauca-blancoRoto py-16 px-4"
     >
       <div className="max-w-screen-lg mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-unicauca-verde text-center mb-2">
+        <h2 className="text-2xl md:text-3xl font-bold text-unicauca-verde text-center mb-2 font-poppins">
           ¿Qué son los volantes de huso?
         </h2>
         <p className="text-unicauca-grisMedio text-center mb-10 text-sm max-w-xl mx-auto">

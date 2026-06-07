@@ -82,7 +82,7 @@ const Retroalimentacion = () => {
 
         {/* Encabezado */}
         <section className="w-full bg-unicauca-verde py-12 px-6 text-center text-white">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">Tu opinión importa</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2 font-poppins">Tu opinión importa</h1>
           <p className="text-white/80 text-base max-w-xl mx-auto">
             Comparte tu experiencia con el Museo Virtual de Historia Natural.
             Tu retroalimentación nos ayuda a mejorar.
@@ -95,7 +95,7 @@ const Retroalimentacion = () => {
           {estado === 'exito' && (
             <div className="flex flex-col items-center text-center gap-5 py-10">
               <AiOutlineCheckCircle className="text-6xl text-unicauca-verde" aria-hidden="true" />
-              <h2 className="text-2xl font-bold text-unicauca-grisOscuro">
+              <h2 className="text-2xl font-bold text-unicauca-grisOscuro font-poppins">
                 ¡Gracias por tu retroalimentación!
               </h2>
               <p className="text-sm text-unicauca-grisMedio max-w-md leading-relaxed">

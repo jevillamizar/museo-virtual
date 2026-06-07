@@ -67,7 +67,7 @@ const Home = () => {
     >
       <div className="max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
         <div className="flex flex-col gap-5">
-          <h2 className="text-3xl font-bold text-white">El Hilo que Nos Une</h2>
+          <h2 className="text-3xl font-bold text-white font-poppins">El Hilo que Nos Une</h2>
           <p className="text-white/80 text-sm font-medium">
             Tradición viva del suroccidente colombiano
           </p>

@@ -12,7 +12,7 @@ const NotFound = () => {
 
       <h1 className="text-8xl font-bold text-green-800 leading-none mb-4">404</h1>
 
-      <h2 className="text-2xl font-semibold text-unicauca-grisOscuro mb-2">
+      <h2 className="text-2xl font-semibold text-unicauca-grisOscuro mb-2 font-poppins">
         Página no encontrada
       </h2>
 

@@ -52,7 +52,7 @@ const Textiles = () => {
 
         {/* Encabezado */}
         <section className="w-full max-w-screen-md px-6 pt-10 pb-6 text-left">
-          <h1 className="text-3xl md:text-4xl font-bold text-unicauca-grisOscuro mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-unicauca-grisOscuro mb-4 font-poppins">
             Textiles en la Arqueología del Suroccidente Colombiano
           </h1>
           <p className="text-base text-unicauca-grisOscuro leading-relaxed mb-3">
@@ -86,7 +86,7 @@ const Textiles = () => {
           aria-label="El proceso de producción textil prehispánico"
           className="w-full max-w-screen-lg px-6 pb-12"
         >
-          <h2 className="text-2xl font-bold text-unicauca-verde text-center mb-2">
+          <h2 className="text-2xl font-bold text-unicauca-verde text-center mb-2 font-poppins">
             Del Campo al Tejido
           </h2>
           <p className="text-sm text-unicauca-grisMedio text-center mb-8 max-w-xl mx-auto">

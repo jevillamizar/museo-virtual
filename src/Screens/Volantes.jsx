@@ -25,7 +25,7 @@ const Volantes = () => {
 
         {/* Encabezado */}
         <section className="w-full max-w-screen-md px-6 pt-10 pb-4 text-left">
-          <h1 className="text-3xl md:text-4xl font-bold text-unicauca-grisOscuro mb-3">
+          <h1 className="text-3xl md:text-4xl font-bold text-unicauca-grisOscuro mb-3 font-poppins">
             La Colección de Volantes de Huso
           </h1>
           <p className="text-base text-unicauca-grisMedio leading-relaxed">
@@ -49,7 +49,7 @@ const Volantes = () => {
 
         {/* Explorar por cultura */}
         <section className="w-full max-w-screen-lg px-6 py-10">
-          <h2 className="text-2xl font-bold text-unicauca-verde mb-2 text-center">
+          <h2 className="text-2xl font-bold text-unicauca-verde mb-2 text-center font-poppins">
             Explora por Área Arqueológica
           </h2>
           <p className="text-sm text-unicauca-grisMedio text-center mb-8">

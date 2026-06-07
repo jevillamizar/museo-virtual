@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        lato:    ['Lato', 'sans-serif'],
+      },
       colors: {
         // Colores institucionales Unicauca (Manual de Identidad Visual V2024-1)
         'unicauca-azul':        '#001282',
