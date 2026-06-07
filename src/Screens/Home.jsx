@@ -1,3 +1,4 @@
+import { useMeta } from '../hooks/useMeta';
 import Contenedor from "../Componentes/2D/Contenedor";
 import ContenedorInvert from "../Componentes/2D/ContenedorInvert";
 import Informacion from "../Componentes/2D/Informacion";
@@ -9,6 +10,10 @@ import Map from "../Componentes/Map/Map";
 import MapI from "../Componentes/Map/MapI";
 
 const Home = () => {
+  useMeta({
+    titulo: 'Acerca del Museo',
+    descripcion: 'Conoce la historia y colección del Museo de Historia Natural de la Universidad del Cauca',
+  });
 
   const cards = [
     { imagen: 'Volante', link: 'Popayan', titulo: 'Popayán', parrafo: 'Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos,' },

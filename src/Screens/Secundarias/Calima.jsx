@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
+import { useMeta } from '../../hooks/useMeta';
 import { getPiezasPorCultura } from '../../supabaseClient';
 import Infotext from "../../Componentes/Text/Infotext";
 import Texto from "../../Componentes/Text/Texto";
@@ -7,6 +8,10 @@ import Datos from "../../Componentes/3D/Datos";
 import LoadingPage from "../../Componentes/UI/LoadingPage";
 
 const Calima = () => {
+  useMeta({
+    titulo: 'Volantes de Huso — Calima',
+    descripcion: 'Piezas arqueológicas de la cultura Calima en el Museo de Historia Natural Unicauca',
+  });
   const [data, setData] = useState([]);
   const [selectedDoc, setSelectedDoc] = useState(null);
   const [loading, setLoading] = useState(true);

@@ -1,6 +1,11 @@
-import Recuadro360 from '../Componentes/3D/Recuadro360';  // Importamos el componente Scene
+import { useMeta } from '../hooks/useMeta';
+import Recuadro360 from '../Componentes/3D/Recuadro360';
 
 const Contact = () => {
+  useMeta({
+    titulo: 'Contacto',
+    descripcion: 'Contáctanos — Museo de Historia Natural Unicauca',
+  });
     return (
       <div>
        <Recuadro360
