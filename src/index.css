@@ -5,12 +5,14 @@
 
 .slick-prev:before,
 .slick-next:before {
-  color: #029f66 !important;
+  color: #001282 !important;
 }  
 
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: #F8F6F0;
+  color: #1F2937;
 }
 
 
