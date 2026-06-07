@@ -51,8 +51,9 @@ const Principal = () => {
 
   return (
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center bg-unicauca-blancoRoto'>
-      <div className='min-h-600 flex flex-wrap items-center justify-center'>
-        <div className="mt-14 lg:mt-16 flex justify-center items-center w-full">
+      <main className='min-h-600 flex flex-wrap items-center justify-center w-full'>
+
+        <section aria-label="Presentación de la Ceramoteca" className="mt-14 lg:mt-16 flex justify-center items-center w-full">
           <Recuadro360
             imagen='PanoramaInterior'
             titulo='CERAMOTECA'
@@ -60,9 +61,9 @@ const Principal = () => {
             parrafo='Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos'
             link='Page'
           />
-        </div>
+        </section>
 
-        <div className="mt-14 lg:mt-16 flex justify-center items-center w-full">
+        <section aria-label="Sobre la Ceramoteca" className="mt-14 lg:mt-16 flex justify-center items-center w-full">
           <Recuadro
             imagen='ceramoteca'
             titulo='CERAMOTECA'
@@ -70,9 +71,9 @@ const Principal = () => {
             parrafo='Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos, Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos'
             link='Page'
           />
-        </div>
+        </section>
 
-        <div className='flex flex-col sm:flex-row justify-center items-center w-full'>
+        <section aria-label="Colecciones del museo" className='flex flex-col sm:flex-row justify-center items-center w-full'>
           <HojaLibro
             imagen='ceramoteca'
             titulo='TEXTILES EN LA ARQUEOLOGÍA'
@@ -85,9 +86,9 @@ const Principal = () => {
             parrafo='Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos'
             link='Popayan'
           />
-        </div>
+        </section>
 
-        <div className='flex flex-col sm:flex-row justify-center items-center w-full'>
+        <section aria-label="Áreas arqueológicas de Colombia" className='flex flex-col sm:flex-row justify-center items-center w-full'>
           <MapI />
           <Texto
             titulo='AREAS ARQUEOLOGICAS DE COLOMBIA'
@@ -99,9 +100,9 @@ const Principal = () => {
             Curiosidades sobre los pingüinos, los Curiosidades sobre los pingüinos Curiosidades 
             sobre los pingüinos, los Curiosidades sobre los pingüinos'
           />
-        </div>
+        </section>
 
-        <div className='w-full max-w-xs sm:max-w-screen-xs md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg px-4'>
+        <section aria-label="Culturas arqueológicas" className='w-full max-w-xs sm:max-w-screen-xs md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg px-4'>
           <Slider {...settings}>
             {cards.map((card, index) => (
               <div key={index}>
@@ -109,8 +110,9 @@ const Principal = () => {
               </div>
             ))}
           </Slider>
-        </div>
-      </div>
+        </section>
+
+      </main>
     </div>
   );
 }

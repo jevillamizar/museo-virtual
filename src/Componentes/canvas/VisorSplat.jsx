@@ -309,7 +309,12 @@ function VisorSplat({ url, nombre, cameraUrl, initialPosition, initialLookAt, on
   }
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto rounded-lg overflow-hidden bg-gray-900" style={{ aspectRatio: '16/9' }}>
+    <div
+      role="img"
+      aria-label={`Modelo 3D interactivo del volante de huso ${nombre || ''}`}
+      className="relative w-full max-w-2xl mx-auto rounded-lg overflow-hidden bg-gray-900"
+      style={{ aspectRatio: '16/9' }}
+    >
       {(phase === 'loading' || phase === 'checking') && (
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 bg-gray-900 gap-4 p-6">
           <p className="text-gray-300 text-sm font-medium">

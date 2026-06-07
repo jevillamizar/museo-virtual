@@ -59,7 +59,8 @@ const Tumaco = () => {
 
   return (
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center p-4 bg-unicauca-blancoRoto'>
-      <div className='min-h-600 flex flex-wrap items-center justify-center'>
+      <main className='min-h-600 flex flex-wrap items-center justify-center w-full'>
+      <section aria-label="Cultura Tumaco — información y piezas arqueológicas" className="w-full flex flex-wrap items-center justify-center">
         
         <div className="mt-12 lg:mt-16 flex justify-center items-center w-full">
           <Infotext
@@ -124,9 +125,14 @@ const Tumaco = () => {
           </div>
         ) : (
           <>
-            <div className='flex justify-center w-full pt-16'>
+            <div className='flex flex-col items-center w-full pt-16 gap-1'>
+              <label htmlFor="selector-pieza-tumaco" className="sr-only">
+                Seleccionar pieza arqueológica
+              </label>
               <select
+                id="selector-pieza-tumaco"
                 onChange={handleSelectChange}
+                aria-describedby="nombre-pieza-tumaco"
                 className='mb-4 p-2 border-2 border-unicauca-azul rounded-md text-unicauca-grisOscuro focus:outline-none focus:ring-2 focus:ring-unicauca-azul'
               >
                 <option value="" disabled>Seleccione un documento</option>
@@ -141,7 +147,8 @@ const Tumaco = () => {
             )}
           </>
         )}
-      </div>
+      </section>
+      </main>
     </div>
   );
 }

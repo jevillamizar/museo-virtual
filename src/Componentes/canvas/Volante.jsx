@@ -32,6 +32,7 @@ const Volante = () => {
 
 const VolanteCanvas = () => {
   return (
+    <div role="img" aria-label="Modelo 3D interactivo del volante de huso Volante 1" className="w-full h-full">
     <Canvas
       frameloop="demand"
       shadows
@@ -47,6 +48,7 @@ const VolanteCanvas = () => {
       </Suspense>
       <Preload all />
     </Canvas>
+    </div>
   );
 };
 
