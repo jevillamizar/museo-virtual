@@ -97,6 +97,9 @@ function VisorSplat({ url, nombre, cameraUrl, initialPosition, initialLookAt, on
       } catch { /* ignorar */ }
       viewerRef.current = null;
     }
+    // gaussian-splats-3d inyecta un div residual en body — limpiarlo
+    document.querySelectorAll('body > div[style*="position: absolute"][style*="width: 100%"][style*="height: 100%"]')
+      .forEach(el => el.remove());
   };
 
   useEffect(() => {

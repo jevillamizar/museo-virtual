@@ -74,7 +74,7 @@ const HeroBanner = () => {
           </button>
 
           <button
-            onClick={() => navigate('/Home')}
+            onClick={() => navigate('/About')}
             className="px-8 py-3 rounded-lg font-semibold text-white border-2 border-white hover:bg-white/10 transition-colors duration-200"
           >
             Sobre el Museo
