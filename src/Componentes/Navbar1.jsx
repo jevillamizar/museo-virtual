@@ -60,7 +60,7 @@ const Navbar1 = () => {
   );
 
   return (
-    <nav className={`bg-unicauca-azul fixed w-full z-10 transition-transform duration-300 ${visible ? '' : '-translate-y-full'}`}>
+    <nav className={`bg-unicauca-azul bg-black/40 fixed w-full z-10 transition-transform duration-300 ${visible ? '' : '-translate-y-full'}`}>
       <div className='h-10vh flex justify-between text-white lg:py-3 px-20 py-2'>
         <div className='flex items-center flex-1'>
           <Link to='/' className='text-3xl font-bold'>Logo</Link>

@@ -44,12 +44,13 @@ function App() {
             <Route path='/Contact' element={<Contact />} />
             <Route path='/About' element={<Home />} />
             <Route path='/Popayan' element={<Popayan />} />
-            <Route path='/Calima' element={<Calima />} />
+            {/* Calima, Nariño, Tumaco, TierraAdentro desactivadas — colección insuficiente (<20 piezas) */}
+            <Route path='/Calima' element={<NotFound />} />
             <Route path='/Corinto' element={<Corinto />} />
-            <Route path='/Nariño' element={<Nariño />} />
+            <Route path='/Nariño' element={<NotFound />} />
             <Route path='/Patia' element={<Patia />} />
-            <Route path='/Tumaco' element={<Tumaco />} />
-            <Route path='/TierraAdentro' element={<TierraAdentro />} />
+            <Route path='/Tumaco' element={<NotFound />} />
+            <Route path='/TierraAdentro' element={<NotFound />} />
             <Route path='/Quimbaya' element={<Quimbaya />} />
             <Route path='/Retroalimentacion' element={<Retroalimentacion />} />
             <Route path='*' element={<NotFound />} />

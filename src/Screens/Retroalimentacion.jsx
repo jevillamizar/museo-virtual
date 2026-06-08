@@ -81,7 +81,7 @@ const Retroalimentacion = () => {
         </div>
 
         {/* Encabezado */}
-        <section className="w-full bg-unicauca-verde py-12 px-6 text-center text-white">
+        <section className="w-full bg-unicauca-azul py-12 px-6 text-center text-white">
           <h1 className="text-3xl md:text-4xl font-bold mb-2 font-poppins">Tu opinión importa</h1>
           <p className="text-white/80 text-base max-w-xl mx-auto">
             Comparte tu experiencia con el Museo Virtual de Historia Natural.
@@ -237,7 +237,7 @@ const Retroalimentacion = () => {
               <button
                 type="submit"
                 disabled={estado === 'enviando'}
-                className="w-full bg-unicauca-verde hover:bg-green-800 disabled:opacity-60 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm flex items-center justify-center gap-2"
+                className="w-full bg-unicauca-azul hover:bg-unicauca-azulhover disabled:opacity-60 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm flex items-center justify-center gap-2"
               >
                 {estado === 'enviando' ? (
                   <>

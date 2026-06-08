@@ -6,6 +6,8 @@ import HojaLibro from "../Componentes/2D/HojaLibro";
 import Texto from "../Componentes/Text/Texto";
 import Card from "../Componentes/2D/Card";
 import SeccionEducativa from "../Componentes/2D/SeccionEducativa";
+import SectionTitle from "../Componentes/UI/SectionTitle";
+import HeroBanner from "../Componentes/2D/HeroBanner";
 
 // Librerias Mapa
 import MapI from "../Componentes/Map/MapI";
@@ -24,12 +26,8 @@ const Principal = () => {
 
   const cards = [
     { imagen: 'popayan', link: 'Popayan', titulo: 'POPAYÁN', parrafo: 'Centro histórico y cultural del Cauca. Sus volantes de huso reflejan la rica tradición cerámica de la región andina caucana.' },
-    { imagen: 'calima', link: 'Calima', titulo: 'CALIMA', parrafo: 'Cultura del valle del río Calima en el Valle del Cauca. Reconocida por su extraordinaria orfebrería y cerámica finamente decorada.' },
     { imagen: 'volantefron', link: 'Corinto', titulo: 'CORINTO', parrafo: 'Asentamientos del norte del Cauca. Sus piezas evidencian intercambios culturales entre grupos de la cordillera y el valle del río Cauca.' },
-    { imagen: 'volantefron', link: 'Nariño', titulo: 'NARIÑO', parrafo: 'Culturas del altiplano nariñense. Sus volantes muestran influencias de las tradiciones andinas del sur y conexiones con culturas de Ecuador.' },
     { imagen: 'patia', link: 'Patia', titulo: 'PATÍA', parrafo: 'Valle del río Patía en el Cauca. Sus piezas reflejan las tradiciones de los pueblos que habitaron esta región interandina.' },
-    { imagen: 'calima', link: 'Tumaco', titulo: 'TUMACO', parrafo: 'Costa Pacífica nariñense. La cultura Tumaco-La Tolita produjo cerámica de notable calidad con representaciones humanas únicas en la arqueología colombiana.' },
-    { imagen: 'popayan', link: 'TierraAdentro', titulo: 'TIERRADENTRO', parrafo: 'Famosa por sus hipogeos y estatuaria. Sus volantes de huso son testimonio de una sociedad con profunda vida espiritual y sofisticadas prácticas funerarias.' },
     { imagen: 'volantetra', link: 'Quimbaya', titulo: 'QUIMBAYA', parrafo: 'Conocida por su maestría en orfebrería. Sus volantes muestran la habilidad técnica y estética de uno de los pueblos más refinados del occidente colombiano.' },
   ];
 
@@ -61,6 +59,8 @@ const Principal = () => {
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center bg-unicauca-blancoRoto'>
       <main className='min-h-600 flex flex-wrap items-center justify-center w-full'>
 
+        <HeroBanner />
+
         <section aria-label="Presentación de la Ceramoteca" className="section-gap flex justify-center items-center w-full">
           <Recuadro360
             imagen='PanoramaInterior'
@@ -90,11 +90,18 @@ const Principal = () => {
           <MapI />
           <Texto
             titulo='Áreas Arqueológicas del Suroccidente Colombiano'
-            parrafo='Las piezas de nuestra colección provienen de ocho zonas arqueológicas del suroccidente colombiano: Popayán, Calima, Corinto, Nariño, Patía, Tumaco, Tierradentro y Quimbaya. Cada zona tiene características únicas que se reflejan en la forma, decoración y materiales de sus volantes de huso.'
+            parrafo='La colección del Museo de Historia Natural cuenta con piezas de cuatro zonas arqueológicas del suroccidente colombiano: Popayán, Corinto, Patía y Quimbaya. Cada zona tiene características únicas que se reflejan en la forma, decoración y materiales de sus volantes de huso.'
           />
         </section>
 
-        <section aria-label="Culturas arqueológicas" className='section-gap w-full max-w-xs sm:max-w-screen-xs md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg px-4'>
+        <div id="coleccion" className="section-gap w-full px-4 max-w-screen-lg mx-auto">
+          <SectionTitle
+            titulo="Áreas Arqueológicas"
+            subtitulo="Explora los volantes de huso de las cuatro zonas arqueológicas representadas en la colección"
+          />
+        </div>
+
+        <section aria-label="Culturas arqueológicas" className='w-full max-w-xs sm:max-w-screen-xs md:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg px-4 pb-20 md:pb-24'>
           <Slider {...settings}>
             {cards.map((card, index) => (
               <div key={index}>
@@ -103,6 +110,13 @@ const Principal = () => {
             ))}
           </Slider>
         </section>
+
+        <div className="section-gap w-full px-4 max-w-screen-lg mx-auto">
+          <SectionTitle
+            titulo="¿Qué son los Volantes de Huso?"
+            subtitulo="Descubre estos instrumentos de hilado prehispánicos del suroccidente colombiano"
+          />
+        </div>
 
         <SeccionEducativa />
 
