@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function Breadcrumb({ items }) {
+function Breadcrumb({ items, dark }) {
   if (!items || items.length === 0) return null;
 
   return (
@@ -16,19 +16,19 @@ function Breadcrumb({ items }) {
         return (
           <span key={index} className="flex items-center gap-1">
             {index > 0 && (
-              <span className="text-gray-400 select-none" aria-hidden="true">›</span>
+              <span className={`select-none ${dark ? 'text-white/40' : 'text-gray-400'}`} aria-hidden="true">›</span>
             )}
             {isLast ? (
               <span
                 aria-current="page"
-                className="text-green-800 font-medium"
+                className={dark ? 'text-white font-medium' : 'text-green-800 font-medium'}
               >
                 {item.label}
               </span>
             ) : (
               <Link
                 to={item.path}
-                className="text-gray-500 hover:text-green-800 transition-colors"
+                className={dark ? 'text-white/70 hover:text-white transition-colors' : 'text-gray-500 hover:text-green-800 transition-colors'}
               >
                 {item.label}
               </Link>
@@ -47,6 +47,11 @@ Breadcrumb.propTypes = {
       path:  PropTypes.string.isRequired,
     })
   ).isRequired,
+  dark: PropTypes.bool,
+};
+
+Breadcrumb.defaultProps = {
+  dark: false,
 };
 
 export default Breadcrumb;

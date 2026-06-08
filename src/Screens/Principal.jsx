@@ -25,10 +25,10 @@ const Principal = () => {
   });
 
   const cards = [
-    { imagen: 'popayan', link: 'Popayan', titulo: 'POPAYÁN', parrafo: 'Centro histórico y cultural del Cauca. Sus volantes de huso reflejan la rica tradición cerámica de la región andina caucana.' },
-    { imagen: 'volantefron', link: 'Corinto', titulo: 'CORINTO', parrafo: 'Asentamientos del norte del Cauca. Sus piezas evidencian intercambios culturales entre grupos de la cordillera y el valle del río Cauca.' },
-    { imagen: 'patia', link: 'Patia', titulo: 'PATÍA', parrafo: 'Valle del río Patía en el Cauca. Sus piezas reflejan las tradiciones de los pueblos que habitaron esta región interandina.' },
-    { imagen: 'volantetra', link: 'Quimbaya', titulo: 'QUIMBAYA', parrafo: 'Conocida por su maestría en orfebrería. Sus volantes muestran la habilidad técnica y estética de uno de los pueblos más refinados del occidente colombiano.' },
+    { imagen: 'popayan',     link: 'Popayan', titulo: 'POPAYÁN',  cultura: 'Popayán',  colorCultura: 'bg-green-700 text-white',  parrafo: 'Centro histórico y cultural del Cauca. Sus volantes de huso reflejan la rica tradición cerámica de la región andina caucana.' },
+    { imagen: 'volantefron', link: 'Corinto', titulo: 'CORINTO',   cultura: 'Corinto',   colorCultura: 'bg-orange-700 text-white', parrafo: 'Asentamientos del norte del Cauca. Sus piezas evidencian intercambios culturales entre grupos de la cordillera y el valle del río Cauca.' },
+    { imagen: 'patia',       link: 'Patia',   titulo: 'PATÍA',     cultura: 'Patía',     colorCultura: 'bg-teal-700 text-white',   parrafo: 'Valle del río Patía en el Cauca. Sus piezas reflejan las tradiciones de los pueblos que habitaron esta región interandina.' },
+    { imagen: 'volantetra',  link: 'Quimbaya',titulo: 'QUIMBAYA',  cultura: 'Quimbaya',  colorCultura: 'bg-amber-700 text-white',  parrafo: 'Conocida por su maestría en orfebrería. Sus volantes muestran la habilidad técnica y estética de uno de los pueblos más refinados del occidente colombiano.' },
   ];
 
   const settings = {
@@ -105,7 +105,7 @@ const Principal = () => {
           <Slider {...settings}>
             {cards.map((card, index) => (
               <div key={index}>
-                <Card imagen={card.imagen} titulo={card.titulo} parrafo={card.parrafo} link={card.link}/>
+                <Card imagen={card.imagen} titulo={card.titulo} parrafo={card.parrafo} link={card.link} cultura={card.cultura} colorCultura={card.colorCultura}/>
               </div>
             ))}
           </Slider>

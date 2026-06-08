@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion';
 import { GiSpinningTop, GiYarn } from 'react-icons/gi';
 import { AiOutlineHeart } from 'react-icons/ai';
+import { useRevealOnScroll, staggerContainer, revealVariants } from '../../hooks/useRevealOnScroll';
 
 const bloques = [
   {
@@ -23,31 +25,33 @@ const bloques = [
 ];
 
 const SeccionEducativa = () => {
+  const { ref, isInView } = useRevealOnScroll();
+
   return (
     <section
       aria-label="Sección educativa sobre volantes de huso"
       className="w-full bg-unicauca-blancoRoto py-16 px-4"
     >
       <div className="max-w-screen-lg mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-unicauca-verde text-center mb-2 font-poppins">
-          ¿Qué son los volantes de huso?
-        </h2>
-        <p className="text-unicauca-grisMedio text-center mb-10 text-sm max-w-xl mx-auto">
-          Conoce el instrumento que convirtió fibras en tejido y culturas en historia.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <motion.div
+          ref={ref}
+          variants={staggerContainer}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
           {bloques.map(({ Icono, titulo, texto }) => (
-            <div
+            <motion.div
               key={titulo}
+              variants={revealVariants}
               className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 flex flex-col items-center text-center gap-4"
             >
               <Icono className="text-5xl text-unicauca-verde" aria-hidden="true" />
               <h3 className="text-lg font-semibold text-unicauca-verde">{titulo}</h3>
               <p className="text-sm text-unicauca-grisOscuro leading-relaxed">{texto}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -11,7 +11,12 @@ function Card(props) {
             <div className='w-full'>
                 <div className='text-center p-5 md:p-5 font-lato font-normal leading-6'>
                     <p className='text-2xl font-semibold pt-2 pb-2 md:pb-3'>{props.titulo}</p>
-                    <div className='w-full flex justify-center items-center' style={{ height: '200px' }}>
+                    <div className='relative w-full flex justify-center items-center' style={{ height: '200px' }}>
+                        {props.cultura && (
+                          <span className={`absolute top-3 left-3 z-10 text-xs font-semibold uppercase px-3 py-1 rounded-full ${props.colorCultura}`}>
+                            {props.cultura}
+                          </span>
+                        )}
                         <img
                             className='w-full h-full'
                             src={imagenPath}
@@ -42,7 +47,14 @@ Card.propTypes = {
     imagen: PropTypes.string.isRequired,
     titulo: PropTypes.string.isRequired,
     parrafo: PropTypes.string.isRequired,
-    link: PropTypes.string 
+    link: PropTypes.string,
+    cultura: PropTypes.string,
+    colorCultura: PropTypes.string,
+};
+
+Card.defaultProps = {
+    cultura: '',
+    colorCultura: 'bg-gray-500 text-white',
 };
 
 export default Card;

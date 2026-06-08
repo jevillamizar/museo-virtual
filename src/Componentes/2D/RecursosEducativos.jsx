@@ -48,15 +48,6 @@ const RecursosEducativos = () => {
       className="w-full bg-unicauca-blancoRoto py-16 px-4"
     >
       <div className="max-w-screen-lg mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-unicauca-verde mb-2 font-poppins">
-            Recursos para Docentes y Facilitadores
-          </h2>
-          <p className="text-unicauca-grisMedio text-sm max-w-xl mx-auto">
-            Materiales para incorporar el patrimonio textil prehispánico en actividades educativas y talleres comunitarios.
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           {recursos.map(({ Icono, titulo, descripcion, etiqueta, badgeClass }) => (
             <div

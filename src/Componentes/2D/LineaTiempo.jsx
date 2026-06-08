@@ -64,15 +64,6 @@ const LineaTiempo = () => {
       aria-label="Cronología cultural del suroccidente colombiano"
       className="w-full py-16 px-4 bg-white"
     >
-      <div className="max-w-screen-lg mx-auto text-center mb-10">
-        <h2 className="text-2xl md:text-3xl font-bold text-unicauca-verde mb-2 font-poppins">
-          Cronología Cultural del Suroccidente Colombiano
-        </h2>
-        <p className="text-unicauca-grisMedio text-sm max-w-xl mx-auto">
-          Un recorrido por los períodos que dieron origen a las piezas de nuestra colección.
-        </p>
-      </div>
-
       <VerticalTimeline lineColor={VERDE}>
         {eventos.map(({ fecha, titulo, texto, Icono, color }) => (
           <VerticalTimelineElement

@@ -2,12 +2,12 @@ import { useEffect, useState, useCallback } from 'react';
 import { useMeta } from '../../hooks/useMeta';
 import { useAnalytics } from '../../hooks/useAnalytics';
 import { getPiezasPorCultura } from '../../supabaseClient';
-import Infotext from "../../Componentes/Text/Infotext";
 import Texto from "../../Componentes/Text/Texto";
 import Boxtext from "../../Componentes/Text/Boxtext";
 import Datos from "../../Componentes/3D/Datos";
 import LoadingPage from "../../Componentes/UI/LoadingPage";
-import Breadcrumb from "../../Componentes/UI/Breadcrumb";
+import PageHeader from "../../Componentes/UI/PageHeader";
+import SeccionInfo from "../../Componentes/2D/SeccionInfo";
 
 const Patia = () => {
   useAnalytics('Cultura - Patía');
@@ -69,20 +69,25 @@ const Patia = () => {
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center p-4 bg-unicauca-blancoRoto'>
       <main className='min-h-600 flex flex-wrap items-center justify-center w-full'>
       <section aria-label="Cultura Patía — información y piezas arqueológicas" className="w-full flex flex-wrap items-center justify-center">
-        <div className="w-full px-4 pt-4">
-          <Breadcrumb items={[
+        <PageHeader
+          titulo="Patía"
+          imagen="/imagenArea/patia.png"
+          breadcrumbItems={[
             { label: 'Inicio', path: '/' },
             { label: 'Áreas Arqueológicas', path: '/' },
             { label: 'Patía', path: '/Patia' },
-          ]} />
-        </div>
-        
-        <div className="section-gap flex justify-center items-center w-full">
-          <Infotext
-            titulo='El Valle del Patía: Tradición e Identidad'
-            parrafo='El valle del río Patía, enclavado entre la cordillera Occidental y Central del Cauca, fue hogar de comunidades que desarrollaron sus propias tradiciones textiles. Los volantes de huso de esta región reflejan la identidad cultural de sus habitantes y su adaptación a las condiciones particulares de este territorio interandino cálido y biodiverso.'
-          />
-        </div>
+          ]}
+        />
+
+        <SeccionInfo
+          imagen="/imagenArea/patia.png"
+          titulo="El Valle del Patía: Tradición e Identidad"
+          parrafos={[
+            'El valle del río Patía, enclavado entre la cordillera Occidental y Central del Cauca, fue hogar de comunidades que desarrollaron sus propias tradiciones textiles.',
+            'Los volantes de huso de esta región reflejan la identidad cultural de sus habitantes y su adaptación a las condiciones particulares de este territorio interandino cálido y biodiverso.',
+          ]}
+          invertido={true}
+        />
 
         <Boxtext
           parrafo='Variabilidad morfológica y estilística'

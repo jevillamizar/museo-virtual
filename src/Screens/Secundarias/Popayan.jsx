@@ -2,12 +2,12 @@ import { useEffect, useState, useCallback } from 'react';
 import { useMeta } from '../../hooks/useMeta';
 import { useAnalytics } from '../../hooks/useAnalytics';
 import { getPiezasPorCultura } from '../../supabaseClient';
-import Infotext from "../../Componentes/Text/Infotext";
 import Texto from "../../Componentes/Text/Texto";
 import Boxtext from "../../Componentes/Text/Boxtext";
 import Datos from "../../Componentes/3D/Datos";
 import LoadingPage from "../../Componentes/UI/LoadingPage";
-import Breadcrumb from "../../Componentes/UI/Breadcrumb";
+import PageHeader from "../../Componentes/UI/PageHeader";
+import SeccionInfo from "../../Componentes/2D/SeccionInfo";
 
 const Popayan = () => {
   useAnalytics('Cultura - Popayán');
@@ -69,19 +69,25 @@ const Popayan = () => {
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center p-4 bg-unicauca-blancoRoto'>
       <main className='min-h-600 flex flex-wrap items-center justify-center w-full'>
       <section aria-label="Cultura Popayán — información y piezas arqueológicas" className="w-full flex flex-wrap items-center justify-center">
-        <div className="w-full px-4 pt-4">
-          <Breadcrumb items={[
+        <PageHeader
+          titulo="Popayán"
+          imagen="/imagenArea/popayan.png"
+          breadcrumbItems={[
             { label: 'Inicio', path: '/' },
             { label: 'Áreas Arqueológicas', path: '/' },
             { label: 'Popayán', path: '/Popayan' },
-          ]} />
-        </div>
-        <div className="section-gap flex justify-center items-center w-full">
-          <Infotext
-            titulo='Popayán y sus Volantes de Huso'
-            parrafo='Popayán, la "Ciudad Blanca" del sur de Colombia, fue un importante centro cultural y de intercambio durante el período prehispánico. Los volantes de huso encontrados en esta zona muestran la influencia de diversas tradiciones cerámicas andinas y evidencian una activa producción textil que perduró por siglos.'
-          />
-        </div>
+          ]}
+        />
+
+        <SeccionInfo
+          imagen="/imagenArea/popayan.png"
+          titulo="Popayán y sus Volantes de Huso"
+          parrafos={[
+            'Popayán, la "Ciudad Blanca" del sur de Colombia, fue un importante centro cultural y de intercambio durante el período prehispánico.',
+            'Los volantes de huso encontrados en esta zona muestran la influencia de diversas tradiciones cerámicas andinas y evidencian una activa producción textil que perduró por siglos.',
+          ]}
+          invertido={false}
+        />
 
         <Boxtext
           parrafo='Variabilidad morfológica y estilística'

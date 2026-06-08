@@ -2,12 +2,12 @@ import { useEffect, useState, useCallback } from 'react';
 import { useMeta } from '../../hooks/useMeta';
 import { useAnalytics } from '../../hooks/useAnalytics';
 import { getPiezasPorCultura } from '../../supabaseClient';
-import Infotext from "../../Componentes/Text/Infotext";
 import Texto from "../../Componentes/Text/Texto";
 import Boxtext from "../../Componentes/Text/Boxtext";
 import Datos from "../../Componentes/3D/Datos";
 import LoadingPage from "../../Componentes/UI/LoadingPage";
-import Breadcrumb from "../../Componentes/UI/Breadcrumb";
+import PageHeader from "../../Componentes/UI/PageHeader";
+import SeccionInfo from "../../Componentes/2D/SeccionInfo";
 
 const Quimbaya = () => {
   useAnalytics('Cultura - Quimbaya');
@@ -69,20 +69,25 @@ const Quimbaya = () => {
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center p-4 bg-unicauca-blancoRoto'>
       <main className='min-h-600 flex flex-wrap items-center justify-center w-full'>
       <section aria-label="Cultura Quimbaya — información y piezas arqueológicas" className="w-full flex flex-wrap items-center justify-center">
-        <div className="w-full px-4 pt-4">
-          <Breadcrumb items={[
+        <PageHeader
+          titulo="Quimbaya"
+          imagen="/imagenArea/quimbaya.png"
+          breadcrumbItems={[
             { label: 'Inicio', path: '/' },
             { label: 'Áreas Arqueológicas', path: '/' },
             { label: 'Quimbaya', path: '/Quimbaya' },
-          ]} />
-        </div>
-        
-        <div className="section-gap flex justify-center items-center w-full">
-          <Infotext
-            titulo='Los Quimbaya: Maestros del Hilo y el Metal'
-            parrafo='Los Quimbaya, célebres por su incomparable maestría en la orfebrería, también desarrollaron sofisticadas técnicas textiles. Sus volantes de huso, elaborados con gran cuidado técnico y estético, reflejan la habilidad artesanal de uno de los pueblos más refinados del occidente colombiano. El tejido y el metal eran en su cultura expresiones complementarias de una misma búsqueda de belleza y significado.'
-          />
-        </div>
+          ]}
+        />
+
+        <SeccionInfo
+          imagen="/imagenArea/quimbaya.png"
+          titulo="Los Quimbaya: Maestros del Hilo y el Metal"
+          parrafos={[
+            'Los Quimbaya, célebres por su incomparable maestría en la orfebrería, también desarrollaron sofisticadas técnicas textiles.',
+            'Sus volantes de huso, elaborados con gran cuidado técnico y estético, reflejan la habilidad artesanal de uno de los pueblos más refinados del occidente colombiano.',
+          ]}
+          invertido={false}
+        />
 
         <Boxtext
           parrafo='Variabilidad morfológica y estilística'

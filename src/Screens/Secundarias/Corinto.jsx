@@ -2,12 +2,12 @@ import { useEffect, useState, useCallback } from 'react';
 import { useMeta } from '../../hooks/useMeta';
 import { useAnalytics } from '../../hooks/useAnalytics';
 import { getPiezasPorCultura } from '../../supabaseClient';
-import Infotext from "../../Componentes/Text/Infotext";
 import Texto from "../../Componentes/Text/Texto";
 import Boxtext from "../../Componentes/Text/Boxtext";
 import Datos from "../../Componentes/3D/Datos";
 import LoadingPage from "../../Componentes/UI/LoadingPage";
-import Breadcrumb from "../../Componentes/UI/Breadcrumb";
+import PageHeader from "../../Componentes/UI/PageHeader";
+import SeccionInfo from "../../Componentes/2D/SeccionInfo";
 
 const Corinto = () => {
   useAnalytics('Cultura - Corinto');
@@ -69,20 +69,25 @@ const Corinto = () => {
     <div className='min-h-screen flex flex-wrap items-center justify-center text-center p-4 bg-unicauca-blancoRoto'>
       <main className='min-h-600 flex flex-wrap items-center justify-center w-full'>
       <section aria-label="Cultura Corinto — información y piezas arqueológicas" className="w-full flex flex-wrap items-center justify-center">
-        <div className="w-full px-4 pt-4">
-          <Breadcrumb items={[
+        <PageHeader
+          titulo="Corinto"
+          imagen="/imagenArea/corinto.png"
+          breadcrumbItems={[
             { label: 'Inicio', path: '/' },
             { label: 'Áreas Arqueológicas', path: '/' },
             { label: 'Corinto', path: '/Corinto' },
-          ]} />
-        </div>
-        
-        <div className="section-gap flex justify-center items-center w-full">
-          <Infotext
-            titulo='Corinto: Cruce de Culturas en el Norte del Cauca'
-            parrafo='El norte del Cauca fue un territorio de encuentros e intercambios entre diversas comunidades prehispánicas. Los volantes de huso hallados en Corinto y sus alrededores evidencian estas conexiones culturales, mostrando características técnicas de grupos de la cordillera y el valle del río Cauca. Su cerámica es testimonio de una región dinámica y culturalmente diversa.'
-          />
-        </div>
+          ]}
+        />
+
+        <SeccionInfo
+          imagen="/imagenArea/corinto.png"
+          titulo="Corinto: Cruce de Culturas en el Norte del Cauca"
+          parrafos={[
+            'El norte del Cauca fue un territorio de encuentros e intercambios entre diversas comunidades prehispánicas.',
+            'Los volantes de huso hallados en Corinto y sus alrededores evidencian estas conexiones culturales, mostrando características técnicas de grupos de la cordillera y el valle del río Cauca.',
+          ]}
+          invertido={false}
+        />
 
         <Boxtext
           parrafo='Variabilidad morfológica y estilística'
