@@ -66,30 +66,9 @@ const ArticuloVariabilidadV2 = () => {
       <header className="w-full bg-unicauca-azul py-16 px-6 text-center text-white mt-4 shadow-md relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10 pointer-events-none" />
         <div className="max-w-5xl mx-auto relative z-10">
-          <span className="bg-unicauca-verde text-xs font-bold px-4 py-2 rounded-full tracking-widest uppercase shadow-sm">
-            Artículo de Investigación Científica — Versión Ampliada
-          </span>
-          <h1 className="text-3xl md:text-5xl font-black mt-5 leading-tight tracking-tight uppercase">
-            Variabilidad y Estandarización en la Producción de Hilados: <br className="hidden md:block"/>
-            Un Análisis Comparativo en el Suroccidente Prehispánico Colombiano
+          <h1 className="text-2xl md:text-5xl font-black mt-5 leading-tight tracking-tight">
+            La Producción de Hilados en el Suroccidente Prehispánico Colombiano
           </h1>
-          
-          {/* Autores e Institución */}
-          <div className="mt-10 flex flex-wrap justify-center gap-10 text-sm border-t border-white/20 pt-6">
-            <div className="text-center">
-              <p className="font-bold text-white text-base">Hernando Javier Giraldo</p>
-              <p className="text-xs text-white/70 font-medium">Docente Investigador — Departamento de Antropología</p>
-            </div>
-            <div className="text-center">
-              <p className="font-bold text-white text-base">Sofía Gutiérrez</p>
-              <p className="text-xs text-white/70 font-medium">Área de Arqueología — Museo de Historia Natural</p>
-            </div>
-            <div className="text-center">
-              <p className="font-bold text-white text-base">Luna Ledesma</p>
-              <p className="text-xs text-white/70 font-medium">Facultad de Ciencias Humanas y Sociales</p>
-            </div>
-          </div>
-          <p className="text-xs text-white/50 mt-4 italic">Universidad del Cauca, Popayán, Colombia</p>
         </div>
       </header>
 
@@ -97,33 +76,16 @@ const ArticuloVariabilidadV2 = () => {
       <main className="w-full max-w-5xl px-6 py-12 flex flex-col gap-12 text-left">
         
         {/* Sección de Resúmenes */}
-        <section className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 grid md:grid-cols-2 gap-8">
+        <section className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 grid md:grid-cols-1 gap-8">
           <div>
-            <h2 className="text-sm font-bold text-unicauca-azul mb-3 uppercase tracking-wider border-b border-gray-100 pb-2">Resumen Extendido</h2>
+            <h2 className="text-sm font-bold text-unicauca-azul mb-3 uppercase tracking-wider border-b border-gray-100 pb-2">Para empezar</h2>
             <p className="text-xs md:text-sm leading-relaxed text-gray-600 text-justify">
-              Este estudio aborda la variabilidad material y tecnológica en la producción de hilos dentro de cuatro áreas arqueológicas 
+              Queremos mostrar la variabilidad material y tecnológica en la producción de hilos dentro de cuatro áreas arqueológicas 
               definidas del suroccidente colombiano (Corinto, Patía, Popayán y Quimbaya), abarcando cronologías entre los siglos VII y XVI d.C. 
-              A partir del análisis cuantitativo y cualitativo de 337 volantes de huso cerámicos resguardados en el Museo de Historia Natural 
+              Para ello, se parte del análisis cuantitativo y cualitativo de 337 volantes de huso cerámicos resguardados en el Museo de Historia Natural 
               de la Universidad del Cauca, se evalúan las propiedades mecánicas de los artefactos. Los resultados demuestran que la actividad 
               textil prehispánica distó de ser un proceso homogéneo: osciló entre estrategias domésticas autónomas de hilado multifibra y 
               patrones de manufactura altamente estandarizados vinculados al control económico y la consolidación de estatus social.
-            </p>
-            <p className="mt-4 text-xs text-gray-500 font-medium">
-              <span className="text-unicauca-azul">Palabras clave:</span> Volantes de huso, Cultura material, Economía artesanal, Estandarización tecnológica, Suroccidente colombiano.
-            </p>
-          </div>
-          <div className="border-t md:border-t-0 md:border-l border-gray-200 pt-6 md:pt-0 md:pl-8">
-            <h2 className="text-sm font-bold text-unicauca-azul mb-3 uppercase tracking-wider border-b border-gray-100 pb-2">Extended Abstract</h2>
-            <p className="text-xs md:text-sm leading-relaxed text-gray-600 italic text-justify">
-              This paper examines the material and technological variability of thread production across four archaeological regions 
-              in southwestern Colombia (Corinto, Patia, Popayan, and Quimbaya) dating from the 700 to 1550 AD. Using a sample of 337 ceramic 
-              spindle whorls from the Natural History Museum at Universidad del Cauca, we analyze the physical and mechanical properties 
-              of these tools. The data reveals that pre-Hispanic textile crafts were not uniform; instead, they reflected a complex continuum 
-              ranging from autonomous household multi-fiber spinning to highly standardized, specialized production systems closely tied to 
-              elite economic control and social prestige.
-            </p>
-            <p className="mt-4 text-xs text-gray-500 font-medium">
-              <span className="text-unicauca-azul">Keywords:</span> Spindle whorls, Material culture, Craft economics, Technological standardization, Colombian Southwest.
             </p>
           </div>
         </section>
@@ -132,7 +94,7 @@ const ArticuloVariabilidadV2 = () => {
         <section className="flex flex-col gap-4">
           <div className="flex items-center gap-3 border-b border-gray-200 pb-2">
             <GiArchiveResearch className="text-3xl text-unicauca-verde" />
-            <h2 className="text-xl md:text-2xl font-bold text-unicauca-azul">1. Introducción y Modelos de Organización Económica</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-unicauca-azul">Introducción y Modelos de Organización Económica</h2>
           </div>
           <p className="text-sm md:text-base leading-relaxed text-gray-700 text-justify">
             La investigación de las industrias artesanales prehispánicas, particularmente la textil, constituye una ventana analítica hacia 
@@ -153,7 +115,7 @@ const ArticuloVariabilidadV2 = () => {
         <section className="bg-gradient-to-br from-unicauca-azul/5 via-transparent to-transparent rounded-xl p-6 border-l-4 border-unicauca-azul flex flex-col gap-4">
           <div className="flex items-center gap-2">
             <FaQuoteLeft className="text-xl text-unicauca-azul" />
-            <h3 className="font-bold text-unicauca-azul text-base">2. Evidencias Etnohistóricas del Contacto (Siglo XVI)</h3>
+            <h3 className="font-bold text-unicauca-azul text-base">Evidencias Etnohistóricas del Contacto (Siglo XVI)</h3>
           </div>
           <p className="text-xs md:text-sm text-gray-600 leading-relaxed text-justify">
             Las crónicas de Indias corroboran de manera documental las profundas asimetrías y especializaciones regionales en el uso del textil. 
@@ -181,7 +143,7 @@ const ArticuloVariabilidadV2 = () => {
         <section className="flex flex-col gap-5">
           <div className="flex items-center gap-3 border-b border-gray-200 pb-2">
             <GiSpinningTop className="text-3xl text-unicauca-verde" />
-            <h2 className="text-xl md:text-2xl font-bold text-unicauca-azul">3. Principios Mecánicos y Restricciones de la Fibra</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-unicauca-azul">Principios Mecánicos y Restricciones de la Fibra</h2>
           </div>
           <p className="text-sm md:text-base leading-relaxed text-gray-700 text-justify">
             El análisis de los volantes de huso se fundamenta en leyes de la física rotacional. Las dimensiones físicas del artefacto 
@@ -224,7 +186,7 @@ const ArticuloVariabilidadV2 = () => {
         <section className="flex flex-col gap-6">
           <div className="flex items-center gap-3 border-b border-gray-200 pb-2">
             <FaMapMarkerAlt className="text-3xl text-unicauca-verde" />
-            <h2 className="text-xl md:text-2xl font-bold text-unicauca-azul">4. Datos Arqueológicos por Regiones Analizadas</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-unicauca-azul">Datos Arqueológicos por Regiones Analizadas</h2>
           </div>
           <p className="text-sm md:text-base text-gray-700 text-justify">
             El universo de análisis comprende <span className="font-semibold text-unicauca-verde">337 volantes de huso</span>. El desglose 
@@ -263,7 +225,7 @@ const ArticuloVariabilidadV2 = () => {
         <section className="flex flex-col gap-4">
           <div className="flex items-center gap-3 border-b border-gray-200 pb-2">
             <FaBalanceScale className="text-3xl text-unicauca-verde" />
-            <h2 className="text-xl md:text-2xl font-bold text-unicauca-azul">5. Metodología Estadística y Control de Sesgos de Colección</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-unicauca-azul">Metodología Estadística y Control de Sesgos de Colección</h2>
           </div>
           <p className="text-sm md:text-base leading-relaxed text-gray-700 text-justify">
             Un imperativo metodológico crucial radicó en evaluar la validez de la muestra. Al tratarse en gran medida de colecciones conformadas 
