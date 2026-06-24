@@ -17,6 +17,9 @@ import TierraAdentro from './Screens/Secundarias/TierraAdentro';
 import Quimbaya from './Screens/Secundarias/Quimbaya';
 import NotFound from './Screens/NotFound';
 import Retroalimentacion from './Screens/Retroalimentacion';
+import Tejidos from './Screens/Tejidos';
+import ArticuloVariabilidad from './Screens/ArticuloVariabilidad';
+import ArticuloVariabilidadV2 from './Screens/ArticuloVariabilidadV2';
 import Footer from './Componentes/UI/Footer';
 import CookieBanner from './Componentes/UI/CookieBanner';
 
@@ -53,6 +56,9 @@ function App() {
             <Route path='/TierraAdentro' element={<NotFound />} />
             <Route path='/Quimbaya' element={<Quimbaya />} />
             <Route path='/Retroalimentacion' element={<Retroalimentacion />} />
+            <Route path='/Tejidos' element={<Tejidos />} />
+            <Route path='/Articulo' element={<ArticuloVariabilidad />} />
+            <Route path='/Articulo2' element={<ArticuloVariabilidadV2 />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
           <Footer />

@@ -40,6 +40,21 @@ const Navbar1 = () => {
           </Link>
         </li>
         <li className='my-4 py-4 hover:bg-unicauca-azulhover hover:rounded' onClick={handleClick}>
+          <Link to='/Tejidos'>
+            <strong>Hilados en las sociedades prehispánicas</strong>
+          </Link>
+        </li>
+        <li className='my-4 py-4 hover:bg-unicauca-azulhover hover:rounded' onClick={handleClick}>
+          <Link to='/Articulo'>
+            <strong>Hilados en las sociedades prehispánicas</strong>
+          </Link>
+        </li>
+        <li className='my-4 py-4 hover:bg-unicauca-azulhover hover:rounded' onClick={handleClick}>
+          <Link to='/Articulo2'>
+            <strong>Hilados en las sociedades prehispánicas</strong>
+          </Link>
+        </li>
+        <li className='my-4 py-4 hover:bg-unicauca-azulhover hover:rounded' onClick={handleClick}>
           <Link to='/About'>
             <strong>Historia</strong>
           </Link>
@@ -72,6 +87,11 @@ const Navbar1 = () => {
               <li className='hover:bg-unicauca-azulhover hover:rounded transition cursor-pointer px-3 py-1' onClick={handleClick}>
                 <Link to='/Volantes'>
                   <strong>Volantes</strong>
+                </Link>
+              </li>
+              <li className='hover:bg-unicauca-azulhover hover:rounded transition cursor-pointer px-3 py-1' onClick={handleClick}>
+                <Link to='/Articulo2'>
+                  <strong>Hilados</strong>
                 </Link>
               </li>
               <li className='hover:bg-unicauca-azulhover hover:rounded transition cursor-pointer px-3 py-1' onClick={handleClick}>
