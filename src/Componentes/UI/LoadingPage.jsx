@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function LoadingPage({ mensaje }) {
+function LoadingPage({ mensaje = 'Cargando...' }) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-unicauca-blancoRoto gap-4">
       <div className="w-12 h-12 border-4 border-unicauca-verde border-t-transparent rounded-full animate-spin" />
@@ -11,10 +11,6 @@ function LoadingPage({ mensaje }) {
 
 LoadingPage.propTypes = {
   mensaje: PropTypes.string,
-};
-
-LoadingPage.defaultProps = {
-  mensaje: 'Cargando...',
 };
 
 export default LoadingPage;

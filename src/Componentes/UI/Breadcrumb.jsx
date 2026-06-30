@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function Breadcrumb({ items, dark }) {
+function Breadcrumb({ items, dark = false }) {
   if (!items || items.length === 0) return null;
 
   return (
@@ -48,10 +48,6 @@ Breadcrumb.propTypes = {
     })
   ).isRequired,
   dark: PropTypes.bool,
-};
-
-Breadcrumb.defaultProps = {
-  dark: false,
 };
 
 export default Breadcrumb;

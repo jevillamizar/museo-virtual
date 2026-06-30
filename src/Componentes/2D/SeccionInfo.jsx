@@ -11,7 +11,7 @@ import { useRevealOnScroll, revealFromLeft, revealFromRight } from '../../hooks/
  * @param {boolean}  [props.invertido] - Si true, imagen a la derecha
  * @returns {JSX.Element} Sección con dos columnas desktop / una columna móvil
  */
-const SeccionInfo = ({ imagen, titulo, parrafos, invertido }) => {
+const SeccionInfo = ({ imagen, titulo, parrafos, invertido = false }) => {
   const { ref, isInView } = useRevealOnScroll();
 
   const varImg  = invertido ? revealFromRight : revealFromLeft;
@@ -76,10 +76,6 @@ SeccionInfo.propTypes = {
   titulo: PropTypes.string.isRequired,
   parrafos: PropTypes.arrayOf(PropTypes.string).isRequired,
   invertido: PropTypes.bool,
-};
-
-SeccionInfo.defaultProps = {
-  invertido: false,
 };
 
 export default SeccionInfo;

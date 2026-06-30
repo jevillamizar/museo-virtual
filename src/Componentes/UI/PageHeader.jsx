@@ -9,7 +9,7 @@ import Breadcrumb from './Breadcrumb';
  * @param {Array}  props.breadcrumbItems - Ítems para el componente Breadcrumb
  * @returns {JSX.Element} Header con imagen/degradado, overlay y título
  */
-const PageHeader = ({ titulo, imagen, breadcrumbItems }) => {
+const PageHeader = ({ titulo, imagen = null, breadcrumbItems }) => {
   return (
     <section
       className="relative w-full h-64 md:h-80 flex flex-col justify-center overflow-hidden"
@@ -45,10 +45,6 @@ PageHeader.propTypes = {
   titulo: PropTypes.string.isRequired,
   imagen: PropTypes.string,
   breadcrumbItems: PropTypes.array.isRequired,
-};
-
-PageHeader.defaultProps = {
-  imagen: null,
 };
 
 export default PageHeader;

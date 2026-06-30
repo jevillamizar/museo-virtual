@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { useRevealOnScroll, revealVariants } from '../../hooks/useRevealOnScroll';
 
-const SectionTitle = ({ titulo, subtitulo, alineacion }) => {
+const SectionTitle = ({ titulo, subtitulo, alineacion = 'center' }) => {
   const isCenter = alineacion === 'center';
   const { ref, isInView } = useRevealOnScroll();
 
@@ -33,10 +33,6 @@ SectionTitle.propTypes = {
   titulo:    PropTypes.string.isRequired,
   subtitulo: PropTypes.string,
   alineacion: PropTypes.oneOf(['center', 'left']),
-};
-
-SectionTitle.defaultProps = {
-  alineacion: 'center',
 };
 
 export default SectionTitle;
